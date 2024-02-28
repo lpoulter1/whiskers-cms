@@ -1,0 +1,19 @@
+{
+  "name": "whiskers-cms",
+  "version": "1.0.0",
+  "main": "site.js",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "astro": "^4.4.5",
+    "bootstrap": "^5.3.3"
+  }
+}
