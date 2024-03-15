@@ -1,3 +1,7 @@
+---
+import { Image } from "astro:assets";
+---
+
 <html>
   <body class="container mx-auto">
     <nav>
@@ -16,19 +20,29 @@
     <div>
       <section>
         <div>
-          <img src="img/logo.jpg" alt="Waggles & Whiskers" />
+          <Image
+            src="/logo.jpg"
+            alt="Waggles & Whiskers"
+            width={500}
+            height={200}
+          />
         </div>
       </section>
       <section>
         <div>
           <p>
-            <img src="img/dog.svg" />
+            <Image
+              src="/dog.svg"
+              alt="Waggles & Whiskers"
+              width={20}
+              height={20}
+            />
             Waggles &amp; Whiskers is a well-established and reputable company based
             in the Hanover / Elm Grove area of Brighton that provides a professional,
             reliable and friendly dog walking service that you can trust.
           </p>
           <p>
-            Whether you’re busy working at home or out for the day you can be
+            Whether you're busy working at home or out for the day you can be
             sure your dog will be happy, healthy and safe with Waggles &amp;
             Whiskers.
           </p>
@@ -57,7 +71,12 @@
       <div>
         <small>
           <a href="https://www.facebook.com/waggleswhiskers/">
-            <img src="img/facebook%20icon.ico" />facebook/waggleswhiskers</a
+            <Image
+              src="/facebook-icon.ico"
+              alt="Waggles & Whiskers"
+              width={20}
+              height={20}
+            />facebook/waggleswhiskers</a
           >
         </small>
       </div>
