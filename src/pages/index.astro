@@ -3,46 +3,269 @@ import Layout from "./layout.astro";
 import { Image } from "astro:assets";
 import logoSrc from "./logo.jpg";
 import dogSrc from "./dog.svg";
+import hero_image from "../assets/images/hero-placeholder.jpg";
+import dog_icon from "../assets/icons/icons8-dog-50.png";
+import cert_icon from "../assets/icons/icons8-qualification-68.png";
+import welfare_icon from "../assets/icons/icons8-welfare-50.png";
+import nature_icon from "../assets/icons/icons8-environment-50.png";
+import van_icon from "../assets/icons/icons8-van-50.png";
+import testmoinal1_img from "../assets/images/colin-bow-tie.jpg";
+import testmoinal2_img from "../assets/images/corgi.jpeg";
+import sqgallery from "../assets/images/sq_gallery.jpg";
 ---
 
 <Layout title="Home Page">
-  <section>
-    <div class="grid place-items-center">
+  <section class="mt-20">
+    <!-- <div class="grid grid-cols-2"> -->
+    <div class="flex gap-2">
+      <!-- <div class="flex">
       <Image src={logoSrc} alt="Waggles & Whiskers" width={500} height={200} />
-    </div>
-
-    <p>
+    </div> -->
+      <div class="flex flex-col justify-center gap-6 items-center">
+        <h1 class="text-6xl tracking-widest text-center">
+          Friendly Dog Walking in Brighton
+        </h1>
+        <h2 class="text-2xl tracking-wider text-center">
+          Your Pet's Happiness Starts Here: Trust Waggles and Whiskers for
+          Expert Care in Brighton!
+        </h2>
+        <button
+          class="bg-orange-500 hover:bg-orange-600 active:bg-orange-700 focus:outline-none rounded-lg px-1 py-2 max-w-fit"
+        >
+          waggleswhiskers@gmail.com</button
+        >
+        <button
+          class="bg-orange-500 hover:bg-orange-600 active:bg-orange-700 focus:outline-none rounded-lg"
+          >07875 291157</button
+        >
+      </div>
       <Image
-        src={dogSrc}
-        alt="Waggles & Whiskers"
-        width={20}
-        height={20}
+        src={hero_image}
+        alt="owner stroking a dog"
         class="inline"
+        width={600}
+        height={300}
+        class="rounded-lg shadow-lg m-3"
       />
-      Waggles &amp; Whiskers is a well-established and reputable company based in
-      the Hanover / Elm Grove area of Brighton that provides a professional, reliable
-      and friendly dog walking service that you can trust.
-    </p>
-    <p>
-      Whether you're busy working at home or out for the day you can be sure
-      your dog will be happy, healthy and safe with Waggles &amp; Whiskers.
-    </p>
-    <p>
-      Your dog will benefit both physically and mentally from socialising and
-      playing with other friendly dogs on group walks. Walks are in safe open
-      spaces away from roads in places especially chosen to provide excitement
-      and mental stimulation for your dog. Walks are varied and usually include
-      some time in woodland and also in open fields, they are carefully planned
-      to suit the particular dogs and weather conditions at the time. Group
-      walks are great fun for the dogs and can help reduce boredom, anxiety and
-      destructive behaviours at home. They also learn valuable social skills
-      whilst out with their friends. Your dog will come home deeply relaxed and
-      sleep soundly after their walk.
-    </p>
-    <p>
-      Cats and other pets in the Hanover / Elm Grove area can be visited once or
-      twice a day for feeding and play as required and will be cared for with
-      love while you're away.
-    </p>
+    </div>
+  </section>
+  <!-- ------------------------------------------------------- -->
+
+  <!-- SERVICES & PRICES  -->
+  <!-- map over prices taken from Storyblok -->
+  <section>
+    <div class="grid grid-cols-4 gap-4 mt-80 m-2">
+      <h1 class="text-5xl col-span-4 text-center">Services & Prices</h1>
+      <h2 class="text-3xl col-span-4 text-center">
+        Discover our furry-friendly pricing options, because every wag and
+        whisker deserves affordable care tailored just for them!
+      </h2>
+      <div class="flex flex-col items-center">
+        <Image src={dogSrc} alt="dog" width={100} height={100} />
+        <h3 class="text-2xl">Consolation</h3>
+        <p class="text-lg">FREE</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <Image src={dogSrc} alt="dog" width={100} height={100} />
+        <h3 class="text-2xl">Group Walk</h3>
+        <h4 class="text-1xl italic">Individual</h4>
+        <p class="text-lg">£14</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <Image src={dogSrc} alt="dog" width={100} height={100} />
+        <h3 class="text-2xl">2 Dogs</h3>
+        <h4 class="text-1xl italic">From same house</h4>
+        <p class="text-lg">£25</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <Image src={dogSrc} alt="dog" width={100} height={100} />
+        <h3 class="text-2xl">Double Walk</h3>
+        <h4 class="text-1xl italic">1 Dog same day</h4>
+        <p class="text-lg">£25</p>
+      </div>
+    </div>
+    <!-- ------------------------------------------------------- -->
+    <!-- testimonials & INFO  -->
+    <section class="mt-80">
+      <div class="grid grid-cols-5 gap-10 m-2">
+        <h1 class="text-5xl col-span-5 text-center">Testimonials</h1>
+        <div class="flex flex-col items-center gap-3">
+          <Image src={dog_icon} alt="dog icon" width={80} height={80} />
+          <h3 class="text-2xl text-orange-500">DOGS</h3>
+          <p class="text-lg text-center">
+            Small and medium sized breeds only. Dogs enjoy small group walks
+            with friendly companions, returning home relaxed. Safety and
+            individualised attention are prioritised.
+          </p>
+        </div>
+        <div class="flex flex-col items-center gap-3">
+          <Image
+            src={cert_icon}
+            alt="certificate icon"
+            width={80}
+            height={80}
+          />
+          <h3 class="text-2xl text-orange-500 uppercase">Experiance</h3>
+          <p class="text-lg text-center">
+            Fully insured and registered with Brighton and Hove Council.
+            Qualifications including canine first aid, DBS check, and
+            professional dog walking training.
+          </p>
+        </div>
+        <div class="flex flex-col items-center gap-3">
+          <Image
+            src={welfare_icon}
+            alt="hands holding a heart icon"
+            width={80}
+            height={80}
+          />
+          <h3 class="text-2xl text-orange-500 uppercase">Welfare</h3>
+          <p class="text-lg text-center">
+            Passionate about animal physiology and behaviour and welfare, with a
+            background in Biology.
+          </p>
+        </div>
+        <div class="flex flex-col items-center gap-3">
+          <Image
+            src={nature_icon}
+            alt="hands holding the earth icon"
+            width={80}
+            height={80}
+          />
+          <h3 class="text-2xl text-orange-500 uppercase">nature</h3>
+          <p class="text-lg text-center">
+            Committed to environmental responsibility through the use of
+            biodegradable products.
+          </p>
+        </div>
+        <div class="flex flex-col items-center gap-3">
+          <Image src={van_icon} alt="van icon" width={80} height={80} />
+          <h3 class="text-2xl text-orange-500 uppercase">van</h3>
+          <p class="text-lg text-center">
+            Equipped with a specially adapted, air-conditioned/heated van
+            approved by Brighton & Hove Council for dog comfort and safety.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-32">
+      <!-- left pagnation -->
+      <div class="grid grid-cols-2">
+        <div class="border-2 flex flex-col gap-5 m-2 items-center p-5">
+          <p class="text-center">
+            "I was hesitant at first, but Waggles & Whiskers quickly gained my
+            trust. Their team is professional and passionate, and my pup always
+            comes back from walks happy and tired. Thank you for the excellent
+            service!"
+          </p>
+          <div class="flex flex-col text-center items-center">
+            <Image
+              src={testmoinal1_img}
+              alt="dog testermonial"
+              width={50}
+              height={50}
+              class="rounded-full"
+            />
+            <h4>Colin The Sussage</h4>
+            <h5>Dog</h5>
+          </div>
+        </div>
+
+        <div
+          class="justify-between border-2 flex flex-col gap-2 m-2 items-center p-5"
+        >
+          <p class="text-center">
+            " Thanks to Waggles & Whiskers, my dog is happier and healthier. The
+            walkers are reliable and caring, providing top-notch service that I
+            highly recommend"
+          </p>
+          <div class="text-center flex flex-col items-center">
+            <Image
+              src={testmoinal2_img}
+              alt="dog testermonial"
+              width={50}
+              height={50}
+              class="rounded-full"
+            />
+
+            <h4>Harry the Corgi</h4>
+            <h5>Dog</h5>
+          </div>
+        </div>
+      </div>
+      <!-- left pagnation -->
+    </section>
+    <!-- ------------------------------------------------------- -->
+
+    <!-- GALLERY  -->
+    <section class="mt-80">
+      <!-- map over images taken from Storyblok -->
+      <div class="grid grid-cols-3 justify-items-center">
+        <Image
+          src={sqgallery}
+          alt="dog testermonial"
+          width={300}
+          height={300}
+          class="rounded-md shadow-lg m-3"
+        />
+        <Image
+          src={sqgallery}
+          alt="dog testermonial"
+          width={300}
+          height={300}
+          class="rounded-md shadow-lg m-3"
+        />
+        <Image
+          src={sqgallery}
+          alt="dog testermonial"
+          width={300}
+          height={300}
+          class="rounded-md shadow-lg m-3"
+        />
+        <Image
+          src={sqgallery}
+          alt="dog testermonial"
+          width={300}
+          height={300}
+          class="rounded-md shadow-lg m-3"
+        />
+        <Image
+          src={sqgallery}
+          alt="dog testermonial"
+          width={300}
+          height={300}
+          class="rounded-md shadow-lg m-3"
+        />
+        <Image
+          src={sqgallery}
+          alt="dog testermonial"
+          width={300}
+          height={300}
+          class="rounded-md shadow-lg m-3"
+        />
+        <Image
+          src={sqgallery}
+          alt="dog testermonial"
+          width={300}
+          height={300}
+          class="rounded-md shadow-lg m-3"
+        />
+        <Image
+          src={sqgallery}
+          alt="dog testermonial"
+          width={300}
+          height={300}
+          class="rounded-md shadow-lg m-3"
+        />
+        <Image
+          src={sqgallery}
+          alt="dog testermonial"
+          width={300}
+          height={300}
+          class="rounded-md shadow-lg m-3"
+        />
+      </div>
+    </section>
   </section>
 </Layout>
