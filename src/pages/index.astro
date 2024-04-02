@@ -12,6 +12,9 @@ import van_icon from "../assets/icons/icons8-van-50.png";
 import testmoinal1_img from "../assets/images/colin-bow-tie.jpg";
 import testmoinal2_img from "../assets/images/corgi.jpeg";
 import sqgallery from "../assets/images/sq_gallery.jpg";
+import DogCarousel from "../components/dogCarousel";
+
+import "@/styles/global.css";
 ---
 
 <Layout title="Home Page">
@@ -150,51 +153,9 @@ import sqgallery from "../assets/images/sq_gallery.jpg";
     </section>
 
     <section class="mt-32">
-      <!-- left pagnation -->
-      <div class="grid grid-cols-2">
-        <div class="border-2 flex flex-col gap-5 m-2 items-center p-5">
-          <p class="text-center">
-            "I was hesitant at first, but Waggles & Whiskers quickly gained my
-            trust. Their team is professional and passionate, and my pup always
-            comes back from walks happy and tired. Thank you for the excellent
-            service!"
-          </p>
-          <div class="flex flex-col text-center items-center">
-            <Image
-              src={testmoinal1_img}
-              alt="dog testermonial"
-              width={50}
-              height={50}
-              class="rounded-full"
-            />
-            <h4>Colin The Sussage</h4>
-            <h5>Dog</h5>
-          </div>
-        </div>
-
-        <div
-          class="justify-between border-2 flex flex-col gap-2 m-2 items-center p-5"
-        >
-          <p class="text-center">
-            " Thanks to Waggles & Whiskers, my dog is happier and healthier. The
-            walkers are reliable and caring, providing top-notch service that I
-            highly recommend"
-          </p>
-          <div class="text-center flex flex-col items-center">
-            <Image
-              src={testmoinal2_img}
-              alt="dog testermonial"
-              width={50}
-              height={50}
-              class="rounded-full"
-            />
-
-            <h4>Harry the Corgi</h4>
-            <h5>Dog</h5>
-          </div>
-        </div>
+      <div class="flex justify-center">
+        <DogCarousel client:load />
       </div>
-      <!-- left pagnation -->
     </section>
     <!-- ------------------------------------------------------- -->
 
