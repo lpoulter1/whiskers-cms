@@ -57,34 +57,44 @@ import "@/styles/global.css";
   <!-- SERVICES & PRICES  -->
   <!-- map over prices taken from Storyblok -->
   <section>
-    <div class="grid grid-cols-4 gap-4 mt-80 m-2">
-      <h1 class="text-5xl col-span-4 text-center">Services & Prices</h1>
-      <h2 class="text-3xl col-span-4 text-center">
+    <div class="flex flex-col gap-10 mt-80 m-2">
+      <h1 class="text-5xl col-span-4 text-center tracking-widest">
+        Services & Prices
+      </h1>
+      <h2 class="text-2xl col-span-4 text-center tracking-wide">
         Discover our furry-friendly pricing options, because every wag and
         whisker deserves affordable care tailored just for them!
       </h2>
-      <div class="flex flex-col items-center">
-        <Image src={dogSrc} alt="dog" width={100} height={100} />
-        <h3 class="text-2xl">Consolation</h3>
-        <p class="text-lg">FREE</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <Image src={dogSrc} alt="dog" width={100} height={100} />
-        <h3 class="text-2xl">Group Walk</h3>
-        <h4 class="text-1xl italic">Individual</h4>
-        <p class="text-lg">£14</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <Image src={dogSrc} alt="dog" width={100} height={100} />
-        <h3 class="text-2xl">2 Dogs</h3>
-        <h4 class="text-1xl italic">From same house</h4>
-        <p class="text-lg">£25</p>
-      </div>
-      <div class="flex flex-col items-center">
-        <Image src={dogSrc} alt="dog" width={100} height={100} />
-        <h3 class="text-2xl">Double Walk</h3>
-        <h4 class="text-1xl italic">1 Dog same day</h4>
-        <p class="text-lg">£25</p>
+
+      <div
+        class="border-2 border-red-500 grid col-span-3 items-center gap-5 text-left justify-center"
+      >
+        <Image src={logoSrc} alt="dog" width={300} height={300} />
+        <div class="border-2 border-red-500 flex justify-between">
+          <h3 class="text-2xl">Consultation</h3>
+          <p class="text-lg">FREE</p>
+        </div>
+        <div class="flex border-2 justify-between">
+          <div>
+            <h3 class="text-2xl">Group Walk</h3>
+            <h4 class="text-1xl italic">Individual</h4>
+          </div>
+          <p class="text-lg">£14</p>
+        </div>
+        <div class="border-2 flex items-center justify-between">
+          <div>
+            <h3 class="text-2xl">2 Dogs</h3>
+            <h4 class="text-1xl italic">From same house</h4>
+          </div>
+          <p class="text-lg">£25</p>
+        </div>
+        <div class="border-2 flex items-center justify-between">
+          <div>
+            <h3 class="text-2xl">Double Walk</h3>
+            <h4 class="text-1xl italic">1 Dog same day</h4>
+          </div>
+          <p class="text-lg">£25</p>
+        </div>
       </div>
     </div>
     <!-- ------------------------------------------------------- -->
