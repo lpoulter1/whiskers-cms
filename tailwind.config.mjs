@@ -1,3 +1,5 @@
+import defaultTheme from "tailwindcss/defaultTheme";
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
@@ -17,6 +19,9 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["Quicksand Variable", ...defaultTheme.fontFamily.sans],
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
