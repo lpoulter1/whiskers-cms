@@ -8,23 +8,22 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { reviews } from "src/data/testimonials.astro";
 
-console.log(reviews);
 
-export default function DogCarousel() {
+export default function TestimonialsCarousel() {
   return (
     <Carousel className="w-full max-w-4xl">
       <CarouselContent>
         {reviews.map((review, index) => {
           // Get the next review in the array
           const nextReview = reviews[index + 1];
-          
+
           return (
             <CarouselItem key={index}>
-              <div className="flex border-2 border-blue-500 gap-5">
-                <div className="w-1/2 p-1 border-2 border-red-500 ">
+              <div className="flex gap-5">
+                <div className="w-1/2 p-1">
                   <Card>
                     <CardContent className="flex flex-col aspect-square items-center justify-center p-6 ">
-                      <div class="border-2 flex flex-col gap-5 m-2 items-center p-5">
+                      <div class="flex flex-col gap-5 m-2 items-center p-5">
                         <p>{index}</p>
                         <p class="text-center">"{review.text}"</p>
                         <div class="flex flex-col text-center items-center">
@@ -41,10 +40,10 @@ export default function DogCarousel() {
                   </Card>
                 </div>
                 {nextReview && (
-                  <div className="w-1/2 p-1 border-2 border-green-500 ">
+                  <div className="w-1/2 p-1">
                     <Card>
                       <CardContent className="flex flex-col aspect-square items-center justify-center p-6">
-                        <div class="border-2 flex flex-col gap-5 m-2 items-center p-5">
+                        <div class=" flex flex-col gap-5 m-2 items-center p-5">
                           <p>{index}</p>
                           <p class="text-center">"{nextReview.text}"</p>
                           <div class="flex flex-col text-center items-center">

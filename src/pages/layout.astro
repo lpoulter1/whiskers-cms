@@ -2,10 +2,11 @@
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 const { title } = Astro.props;
-import logoSrc from "./logo.jpg";
+import logoSrc from "public/logo.jpg";
 import { Image } from "astro:assets";
 // Supports weights 300-700
 import "@fontsource-variable/quicksand";
+import Menubar from "../components/menuBar";
 ---
 
 <html lang="en">
@@ -15,8 +16,13 @@ import "@fontsource-variable/quicksand";
     <BaseHead title={title} description="welcome page" />
   </head>
   <body class="container mx-auto">
+    <!-- DO WE REALLY NEED A COMPONENT? -->
+    <!-- <Menubar client:load/> -->
+    <!--  -->
+
     <nav class="flex gap-10 items-center justify-center">
-      <h1>Waggles & Whiskers</h1>
+      <a href="#home">Waggles & Whiskers</a>
+      <!-- <h1>Waggles & Whiskers</h1> -->
       <ul class="nav navbar-nav flex gap-5 items-center">
         <li class="active">
           <a href="#">
@@ -26,12 +32,12 @@ import "@fontsource-variable/quicksand";
               width={100}
               height={100}
             />
-            <span class="sr-only">(current)</span></a
-          >
+            <span class="sr-only">(current)</span>
+          </a>
         </li>
-        <li><a href="Services&Prices.html">Services & Prices</a></li>
-        <li><a href="Testimonials.html">Testimonials</a></li>
-        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="#services">Services & Prices</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#gallery">Gallery</a></li>
       </ul>
     </nav>
     <!-- <h1>{title}</h1> -->
