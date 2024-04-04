@@ -1,0 +1,25 @@
+---
+import logoSrc from "public/logo.jpg";
+import { Image } from "astro:assets";
+
+--- 
+    <nav class="flex gap-10 items-center justify-center">
+      <a href="#home">Waggles & Whiskers</a>
+      <h1>Waggles & Whiskers</h1>
+      <ul class="nav navbar-nav flex gap-5 items-center">
+        <li class="active">
+          <a href="#">
+            <Image
+              src={logoSrc}
+              alt="Waggles & Whiskers"
+              width={100}
+              height={100}
+            />
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li><a href="#services">Services & Prices</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+      </ul>
+    </nav>

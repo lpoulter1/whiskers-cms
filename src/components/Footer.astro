@@ -1,27 +1,27 @@
 ---
 import { Image } from "astro:assets";
-import facebookSrc from "./facebook-icon.ico";
+import facebookIcon from "src/assets/icons/icons8-facebook-50 (1).png";
 ---
 
-<footer>
+<footer class="flex border-2 justify-between items-center">
   <div>
-    <small>
-      <a href="https://www.facebook.com/waggleswhiskers/">
-        <Image
-          src={facebookSrc}
-          alt="Waggles & Whiskers"
-          width={20}
-          height={20}
-        />facebook/waggleswhiskers</a
-      >
-    </small>
+    <big> 07875 291157 </big>
   </div>
   <div>
-    <small> 07875 291157 | 01273 606259</small>
-  </div>
-  <div>
-    <small>
+    <big>
       <a href="mailto:#">waggleswhiskers@gmail.com</a>
-    </small>
+    </big>
+  </div>
+  <div>
+    <big>
+      <a href="https://www.facebook.com/waggleswhiskers/" target="_blank">
+        <Image
+          src={facebookIcon}
+          alt="Waggles & Whiskers"
+          width={60}
+          height={60}
+        /></a
+      >
+    </big>
   </div>
 </footer>

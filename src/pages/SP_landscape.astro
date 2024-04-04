@@ -4,25 +4,37 @@ import logoSrc from "/public/logo.jpg";
 ---
 
 <!-- SERVICES & PRICES  --><!-- map over prices taken from Storyblok -->
-<section id="services" class="border-2 border-blue-500 mt-40 ">
-  <div class="flex flex-col gap-10 m-2">
-    <h1 class="text-5xl col-span-4 text-center tracking-widest">
-      Services & Prices
-    </h1>
-    <h2 class="text-xl col-span-4 text-center tracking-wide">
-      Discover our furry-friendly pricing options, because every wag and whisker
-      deserves affordable care tailored just for them!
-    </h2>
+<section
+  id="services"
+  class="border-2 border-blue-500 mt-40 flex flex-col gap-10 "
+>
+  <h1 class="text-5xl col-span-4 text-center tracking-widest">
+    Services & Prices
+  </h1>
+  <h2 class="text-xl col-span-4 text-center tracking-wide">
+    Discover our furry-friendly pricing options, because every wag and whisker
+    deserves affordable care tailored just for them!
+  </h2>
+
+  <div
+    class="flex flex-col justify-around border-2 border-pink-500 lg:m-10 lg:flex-row"
+  >
+    <Image
+      class="object-contain mb-5"
+      src={logoSrc}
+      alt="dog"
+      width={400}
+      height={400}
+    />
 
     <div
-      class="border-2 grid col-span-3 items-center gap-5 text-left justify-center p-5"
+      class="border-2 border-green-500 flex flex-col m-2 gap-5 text-left lg:p-5 lg:grid lg:col-span-3 lg:justify-center"
     >
-      <Image src={logoSrc} alt="dog" width={300} height={300} />
-      <div class="border-2 flex justify-between">
+      <div class="border-2 flex justify-between lg:gap-10 items-center">
         <h3 class="text-2xl">Consultation</h3>
         <p class="text-lg">FREE</p>
       </div>
-      <div class="flex border-2 justify-between">
+      <div class="flex border-2 justify-between items-center">
         <div>
           <h3 class="text-2xl">Group Walk</h3>
           <h4 class="text-1xl italic">Individual</h4>

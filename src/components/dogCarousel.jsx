@@ -8,24 +8,26 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { reviews } from "src/data/testimonials.astro";
 
-
 export default function TestimonialsCarousel() {
   return (
-    <Carousel className="w-full max-w-4xl">
-      <CarouselContent>
+    <Carousel className="w-full max-w-4xl flex	">
+      <CarouselContent className="flex ">
         {reviews.map((review, index) => {
           // Get the next review in the array
           const nextReview = reviews[index + 1];
+          {
+            /* debugger; */
+          }
 
           return (
-            <CarouselItem key={index}>
-              <div className="flex gap-5">
-                <div className="w-1/2 p-1">
+            <CarouselItem key={index} className="flex ">
+              <div className="flex  gap-10 flex-col md:flex-row">
+                <div className="md:w-1/2 ">
                   <Card>
-                    <CardContent className="flex flex-col aspect-square items-center justify-center p-6 ">
-                      <div class="flex flex-col gap-5 m-2 items-center p-5">
+                    <CardContent className=" ">
+                      <div class="flex flex-col gap-5 m-5 items-center h-3/6 ">
                         <p>{index}</p>
-                        <p class="text-center">"{review.text}"</p>
+                        <p class="text-center ">"{review.text}"</p>
                         <div class="flex flex-col text-center items-center">
                           <img
                             src={review.image}
@@ -40,10 +42,10 @@ export default function TestimonialsCarousel() {
                   </Card>
                 </div>
                 {nextReview && (
-                  <div className="w-1/2 p-1">
+                  <div className="md:w-1/2">
                     <Card>
-                      <CardContent className="flex flex-col aspect-square items-center justify-center p-6">
-                        <div class=" flex flex-col gap-5 m-2 items-center p-5">
+                      <CardContent className="">
+                        <div class="flex flex-col gap-5 m-5 items-center h-3/6  ">
                           <p>{index}</p>
                           <p class="text-center">"{nextReview.text}"</p>
                           <div class="flex flex-col text-center items-center">

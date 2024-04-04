@@ -1,33 +1,27 @@
 ---
 import Layout from "./layout.astro";
-import Menubar from "../components/menuBar";
-
 
 import Home from "./home.astro";
 import ServicesPrices from "src/pages/servicesPrices.astro";
-import Testimonials from "./testimonials.astro";
-import TestimonialsCarousel from "../components/dogCarousel";
+import KeyPoints from "src/pages/key_Points.astro";
 import Gallery from "./gallery.astro";
 
+import Testimonials from "src/pages/testermonials.astro";
+import Services_landscape from "src/pages/SP_landscape.astro";
 
 import "@/styles/global.css";
 ---
 
 <Layout title="Home Page">
-  <section id="home" class="mt-20">
-    <Home/>
+  <section id="home" class="mt-20 border-2">
+    <Home />
   </section>
 
-  <ServicesPrices />
-  
+  <Services_landscape />
+
+  <KeyPoints />
+
   <Testimonials />
-
-  <section id="testimonials" class="mt-32 gap-3">
-    <h1 class="text-5xl text-center mb-5">Testimonials</h1>
-    <div class="flex justify-center">
-      <TestimonialsCarousel client:load />
-    </div>
-  </section>
 
   <Gallery />
 </Layout>
