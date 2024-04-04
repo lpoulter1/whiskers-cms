@@ -53,8 +53,7 @@ export default function TestimonialsCarousel() {
                     <div className="">
                       <Card>
                         <CardContent className=" ">
-                          <div className=" flex  flex-col gap-3 p-2">
-                            
+                          <div className=" flex  flex-col gap-3">
                             <p class="text-center ">"{review.text}"</p>
                             <div class="flex flex-col text-center items-center ">
                               <img
