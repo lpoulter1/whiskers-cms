@@ -29,21 +29,10 @@ export default function TestimonialsCarousel() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  // write and if else statement to check if media is phone or tablet
-  // if it is return null
-  // else return the carousel
-
-  // if (
-  //   window.matchMedia("(max-width: 640px)").matches ||
-  //   window.matchMedia("(max-width: 768px)").matches
-  // ) return (<p>
-  //   Sorry, this carousel is not available on mobile devices.
-  // </p>)
 
   if (isMobile)
     return (
       <div className="flex flex-col">
-        {/* <p className="text-red-500 ">this is the mobile device carousel.</p> */}
         <Carousel className="">
           <CarouselContent className=" ">
             {reviews.map((review, index) => {
