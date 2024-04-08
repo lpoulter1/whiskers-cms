@@ -1,48 +1,27 @@
 ---
 import Layout from "./layout.astro";
-import { Image } from "astro:assets";
-import logoSrc from "./logo.jpg";
-import dogSrc from "./dog.svg";
+
+import Home from "./home.astro";
+import ServicesPrices from "src/pages/servicesPrices.astro";
+import KeyPoints from "src/pages/key_Points.astro";
+import Gallery from "./gallery.astro";
+
+import Testimonials from "src/pages/testermonials.astro";
+import Services_landscape from "src/pages/SP_landscape.astro";
+
+import "@/styles/global.css";
 ---
 
 <Layout title="Home Page">
-  <section>
-    <div class="grid place-items-center">
-      <Image src={logoSrc} alt="Waggles & Whiskers" width={500} height={200} />
-    </div>
-
-    <p>
-      <Image
-        src={dogSrc}
-        alt="Waggles & Whiskers"
-        width={20}
-        height={20}
-        class="inline"
-      />
-      Waggles &amp; Whiskers is a well-established and reputable company based in
-      the Hanover / Elm Grove area of Brighton that provides a professional, reliable
-      and friendly dog walking service that you can trust.
-    </p>
-    <p>
-      Whether you're busy working at home or out for the day you can be sure
-      your dog will be happy, healthy and safe with Waggles &amp; Whiskers.
-    </p>
-    <p>
-      Your dog will benefit both physically and mentally from socialising and
-      playing with other friendly dogs on group walks. Walks are in safe open
-      spaces away from roads in places especially chosen to provide excitement
-      and mental stimulation for your dog. Walks are varied and usually include
-      some time in woodland and also in open fields, they are carefully planned
-      to suit the particular dogs and weather conditions at the time. Group
-      walks are great fun for the dogs and can help reduce boredom, anxiety and
-      destructive behaviours at home. They also learn valuable social skills
-      whilst out with their friends. Your dog will come home deeply relaxed and
-      sleep soundly after their walk.
-    </p>
-    <p>
-      Cats and other pets in the Hanover / Elm Grove area can be visited once or
-      twice a day for feeding and play as required and will be cared for with
-      love while you're away.
-    </p>
+  <section id="home" class="mt-20 border-2">
+    <Home />
   </section>
+
+  <Services_landscape />
+
+  <KeyPoints />
+
+  <Testimonials />
+
+  <Gallery />
 </Layout>

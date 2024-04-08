@@ -1,7 +1,15 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
+
 const { title } = Astro.props;
+
+import Navigation from "../components/navigation.astro";
+import NavbarShadcn from "../components/navbar-shadcn.jsx";
+import NavbarShadcnDrop from "../components/navbar-shadcn-drop.jsx";
+
+// Supports weights 300-700
+import "@fontsource-variable/quicksand";
 ---
 
 <html lang="en">
@@ -10,24 +18,19 @@ const { title } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <BaseHead title={title} description="welcome page" />
   </head>
-  <body class="container mx-auto">
-    <nav>
-      <ul class="nav navbar-nav">
-        <li class="active">
-          <a href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="reviews.html">Recommendations</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="prices.html">Services & Prices</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-      </ul>
-    </nav>
-    <h1>{title}</h1>
+  <body class="container mx-auto md:p-8">
+    <!-- <Navigation /> -->
+    <!-- <NavbarShadcn client:load /> -->
+    <NavbarShadcnDrop client:load />
+    <!-- DO WE REALLY NEED A COMPONENT? -->
+
+    <!-- <h1>{title}</h1> -->
     <article>
       <slot />
       <!-- your content is injected here -->
     </article>
     <Footer />
+
+    ../components/navigation.jsx
   </body>
 </html>

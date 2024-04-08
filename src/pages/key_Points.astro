@@ -1,0 +1,68 @@
+---
+import { Image } from "astro:assets";
+import welfare_icon from "src/assets/icons/icons8-welfare-50.png";
+import cert_icon from "../assets/icons/icons8-qualification-68.png";
+import dog_icon from "../assets/icons/icons8-dog-50.png";
+import van_icon from "../assets/icons/icons8-van-50.png";
+import nature_icon from "../assets/icons/icons8-environment-50.png";
+---
+
+<section class="mt-40 border-2 border-pink-500">
+  <div class="m-2 flex flex-col gap-5 justify -center lg:grid lg:grid-cols-5">
+    <h1 class="text-5xl col-span-5 text-center">
+      need an name for this maybe?
+    </h1>
+    <div class="flex flex-col items-center gap-3">
+      <Image
+        src={welfare_icon}
+        alt="hands holding a heart icon"
+        width={80}
+        height={80}
+      />
+      <h3 class="text-2xl text-orange-500 uppercase">Welfare</h3>
+      <p class="text-lg text-center">
+        Passionate about animal physiology and behaviour and welfare, with a
+        background in Biology.
+      </p>
+    </div>
+    <div class="flex flex-col items-center gap-3">
+      <Image src={cert_icon} alt="certificate icon" width={80} height={80} />
+      <h3 class="text-2xl text-orange-500 uppercase">Experiance</h3>
+      <p class="text-lg text-center">
+        Fully insured and registered with Brighton and Hove Council.
+        Qualifications including canine first aid, DBS check, and professional
+        dog walking training.
+      </p>
+    </div>
+    <div class="flex flex-col items-center gap-3">
+      <Image src={dog_icon} alt="dog icon" width={80} height={80} />
+      <h3 class="text-2xl text-orange-500">DOGS</h3>
+      <p class="text-lg text-center">
+        Small and medium sized breeds only. Dogs enjoy small group walks with
+        friendly companions, returning home relaxed. Safety and individualised
+        attention are prioritised.
+      </p>
+    </div>
+    <div class="flex flex-col items-center gap-3">
+      <Image src={van_icon} alt="van icon" width={80} height={80} />
+      <h3 class="text-2xl text-orange-500 uppercase">van</h3>
+      <p class="text-lg text-center">
+        Equipped with a specially adapted, air-conditioned/heated van approved
+        by Brighton & Hove Council for dog comfort and safety.
+      </p>
+    </div>
+    <div class="flex flex-col items-center gap-3">
+      <Image
+        src={nature_icon}
+        alt="hands holding the earth icon"
+        width={80}
+        height={80}
+      />
+      <h3 class="text-2xl text-orange-500 uppercase">nature</h3>
+      <p class="text-lg text-center">
+        Committed to environmental responsibility through the use of
+        biodegradable products.
+      </p>
+    </div>
+  </div>
+</section>
