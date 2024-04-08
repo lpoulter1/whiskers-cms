@@ -42,7 +42,7 @@ export default function TestimonialsCarousel() {
 
   if (isMobile)
     return (
-      <div class="flex flex-col">
+      <div className="flex flex-col">
         {/* <p className="text-red-500 ">this is the mobile device carousel.</p> */}
         <Carousel className="">
           <CarouselContent className=" ">
@@ -54,8 +54,8 @@ export default function TestimonialsCarousel() {
                       <Card>
                         <CardContent className=" ">
                           <div className=" flex  flex-col gap-3">
-                            <p class="text-center ">"{review.text}"</p>
-                            <div class="flex flex-col text-center items-center ">
+                            <p className="text-center">{review.text}</p>
+                            <div className="flex flex-col text-center items-center ">
                               <img
                                 src={review.image}
                                 alt={review.imageAlt}
@@ -79,64 +79,61 @@ export default function TestimonialsCarousel() {
       </div>
     );
   else {
-    return (
-      <Carousel className="w-full max-w-4xl flex	">
-        <CarouselContent className="flex ">
-          {reviews.map((review, index) => {
-            // Get the next review in the array
-            const nextReview = reviews[index + 1];
-            {
-              /* debugger; */
-            }
+    const carouselItems = [];
 
-            return (
-              <CarouselItem key={index} className="flex ">
-                <div className="flex  gap-10 flex-col md:flex-row">
-                  <div className="md:w-1/2 ">
-                    <Card>
-                      <CardContent className=" ">
-                        <div class="flex flex-col gap-5 m-5 items-center h-3/6 ">
-                          <p>{index}</p>
-                          <p class="text-center ">"{review.text}"</p>
-                          <div class="flex flex-col text-center items-center">
-                            <img
-                              src={review.image}
-                              alt={review.imageAlt}
-                              className="rounded-full h-20 w-20 object-cover"
-                            />
-                            <h4>{review.name}</h4>
-                            <h5>{review.dogBreed}</h5>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                  {nextReview && (
-                    <div className="md:w-1/2">
-                      <Card>
-                        <CardContent className="">
-                          <div class="flex flex-col gap-5 m-5 items-center h-3/6  ">
-                            <p>{index}</p>
-                            <p class="text-center">"{nextReview.text}"</p>
-                            <div class="flex flex-col text-center items-center">
-                              <img
-                                src={nextReview.image}
-                                alt={nextReview.imageAlt}
-                                className="rounded-full h-20 w-20 object-cover"
-                              />
-                              <h4>{nextReview.name}</h4>
-                              <h5>{nextReview.dogBreed}</h5>
-                            </div>
-                          </div>
-                        </CardContent>
-                      </Card>
+    for (let i = 0; i < reviews.length; i += 2) {
+      const review = reviews[i];
+      const nextReview = i + 1 < reviews.length ? reviews[i + 1] : null;
+
+      carouselItems.push(
+        <CarouselItem key={i} className="flex  items-center justify-evenly">
+          <div className="flex  gap-10 flex-col md:flex-row">
+            <div className="md:w-1/2 ">
+              <Card className="h-96 w-96 content-center">
+                <CardContent className=" ">
+                  <div className="flex flex-col gap-5 m-5 items-center h-3/6 ">
+                    <p className="text-center ">"{review.text}"</p>
+                    <div className="flex flex-col text-center items-center">
+                      <img
+                        src={review.image}
+                        alt={review.imageAlt}
+                        className="rounded-full h-20 w-20 object-cover"
+                      />
+                      <h4>{review.name}</h4>
+                      <h5>{review.dogBreed}</h5>
                     </div>
-                  )}
-                </div>
-              </CarouselItem>
-            );
-          })}
-        </CarouselContent>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+            {nextReview && (
+              <div className="md:w-1/2">
+                <Card className="h-96 w-96 content-center">
+                  <CardContent className="">
+                    <div className="flex flex-col gap-5 m-5 items-center h-3/6  ">
+                      <p className="text-center">"{nextReview.text}"</p>
+                      <div className="flex flex-col text-center items-center">
+                        <img
+                          src={nextReview.image}
+                          alt={nextReview.imageAlt}
+                          className="rounded-full h-20 w-20 object-cover"
+                        />
+                        <h4>{nextReview.name}</h4>
+                        <h5>{nextReview.dogBreed}</h5>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            )}
+          </div>
+        </CarouselItem>
+      );
+    }
+
+    return (
+      <Carousel className=" max-w-4xl flex ">
+        <CarouselContent className="flex">{carouselItems}</CarouselContent>
         <CarouselPrevious />
         <CarouselNext />
       </Carousel>
