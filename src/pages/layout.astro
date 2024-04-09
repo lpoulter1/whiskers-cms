@@ -18,19 +18,19 @@ import "@fontsource-variable/quicksand";
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <BaseHead title={title} description="welcome page" />
   </head>
-  <body class="container mx-auto md:p-8">
-    <!-- <Navigation /> -->
-    <!-- <NavbarShadcn client:load /> -->
-    <NavbarShadcnDrop client:load />
-    <!-- DO WE REALLY NEED A COMPONENT? -->
-
-    <!-- <h1>{title}</h1> -->
+  <body class="container mx-auto">
+    <!-- <Navigation Desktop /> -->
+    <nav class="md:block hidden sticky top-0 z-10">
+      <NavbarShadcn client:load />
+    </nav>
+     <!-- <Navigation Mobile /> -->
+    <nav class="block md:hidden sticky top-0 z-10">
+      <NavbarShadcnDrop client:load />
+    </nav>
     <article>
       <slot />
       <!-- your content is injected here -->
     </article>
     <Footer />
-
-    ../components/navigation.jsx
   </body>
 </html>
