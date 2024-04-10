@@ -1,55 +1,107 @@
 ---
 import { Image } from "astro:assets";
 import logoSrc from "public/images/WhatsApp.jpeg";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+import { storyblokEditable } from "@storyblok/astro";
+const { blok } = Astro.props;
+// console.log(blok);
+// console.log(JSON.stringify(blok.prices_table.tbody, null, 2));
 ---
 
-<!-- SERVICES & PRICES  --><!-- map over prices taken from Storyblok -->
-<section class="flex flex-col gap-10">
-  <h1 class="text-5xl col-span-4 text-center tracking-widest">
-    Services & Prices
-  </h1>
-  <h2 class="text-xl col-span-4 text-center tracking-wide">
-    Discover our furry-friendly pricing options, because every wag and whisker
-    deserves affordable care tailored just for them!
-  </h2>
+<div {...storyblokEditable(blok)} class="">
+  <!-- SERVICES & PRICES  --><!-- map over prices taken from Storyblok -->
+  <!--  <StoryblokComponent blok={story.content}>  </StoryblokComponent> -->
+  <section class="flex flex-col gap-10">
+    <h1 class="text-5xl col-span-4 text-center tracking-widest">
+      Services & Prices
+    </h1>
+    <h2 class="text-xl col-span-4 text-center tracking-wide">
+      Discover our furry-friendly pricing options, because every wag and whisker
+      deserves affordable care tailored just for them!
+    </h2>
 
-  <div class="flex flex-col justify-around lg:m-10 lg:flex-row">
-    <Image
-      class="flex object-contain self-center	"
-      src={logoSrc}
-      alt="dog"
-      width={400}
-      height={400}
-    />
+    <div class="flex flex-col justify-around lg:m-10 lg:flex-row">
+      <Image
+        class="flex object-contain self-center"
+        src={logoSrc}
+        alt="dog"
+        width={400}
+        height={400}
+      />
 
-    <div
-      class="flex flex-col m-2 gap-5 text-left lg:p-5 lg:grid lg:col-span-3 lg:justify-center "
-    >
-      <div class="border-2 rounded-md flex justify-between lg:gap-10 items-center p-2">
-        <h3 class="text-2xl font-medium">Consultation</h3>
-        <p class="text-lg text-orange-500 font-medium">FREE</p>
-      </div>
-      <div class="flex border-2 rounded-md  justify-between items-center p-2">
-        <div>
-          <h3 class="text-2xl font-medium">Group Walk</h3>
-          <h4 class="text-1xl italic">Individual</h4>
+      
+    <div  class="flex flex-col m-2 gap-5 text-left lg:p-5 lg:grid lg:col-span-3 lg:justify-center">
+      <table class="table-fixed min-w-80">
+        <!-- <thead class="flex">
+          {
+            blok.prices_table.thead.map((row) => (
+              <tr>
+                <th>{row.value}</th>
+              </tr>
+            ))
+          }
+        </thead> -->
+        <tbody class=" flex flex-col gap-3   ">
+          {
+            blok.prices_table.tbody.map((row) => (
+              <tr class=" flex border-2 rounded-md justify-between items-center p-2	">
+                {row.body.map((cell, cellIndex) => (
+                  // <td class="text-2xl font-medium">{cell.value}</td>
+                  <td
+                    class={`
+                  ${cellIndex === 0 ? "text-2xl font-medium border-2" : ""} 
+                  ${cellIndex === 1 ? "text-1xl italic border-2 m-5 " : ""} 
+                  ${cellIndex === 2 ? "text-lg text-orange-500 font-medium border-2" : ""}`}
+                  >
+                    {cell.value}
+                  </td>
+                ))}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <script define:vars={{ blok }}>
+    console.log(blok);
+    console.log(blok.prices.tbody[0].body[0].value);
+  </script>
+</div>
+
+<!-- hard coded prices table for refrence -->
+
+<div
+        class="flex flex-col m-2 gap-5 text-left lg:p-5 lg:grid lg:col-span-3 lg:justify-center"
+      >
+      <h1 class="text-red-500">hard coded prices table for refrence👇 </h1>
+        <div
+          class="border-2 rounded-md flex items-center justify-between lg:gap-10  p-2"
+        >
+          <h3 class="text-2xl font-medium">Consultation</h3>
+          <p class="text-lg text-orange-500 font-medium">FREE</p>
         </div>
-        <p class="text-lg text-orange-500 font-medium">£14</p>
-      </div>
-      <div class="border-2 rounded-md  flex items-center justify-between p-2">
-        <div>
-          <h3 class="text-2xl font-medium">2 Dogs</h3>
-          <h4 class="text-1xl italic">From same house</h4>
+        <div class="flex border-2 rounded-md justify-between items-center p-2">
+          <div>
+            <h3 class="text-2xl font-medium">Group Walk</h3>
+            <h4 class="text-1xl italic">Individual</h4>
+          </div>
+          <p class="text-lg text-orange-500 font-medium">£14</p>
         </div>
-        <p class="text-lg text-orange-500 font-medium">£25</p>
-      </div>
-      <div class="border-2 rounded-md  flex items-center justify-between p-2">
-        <div>
-          <h3 class="text-2xl font-medium">Double Walk</h3>
-          <h4 class="text-1xl italic">1 Dog same day</h4>
+        <div class="border-2 rounded-md flex items-center justify-between p-2">
+          <div>
+            <h3 class="text-2xl font-medium">2 Dogs</h3>
+            <h4 class="text-1xl italic">From same house</h4>
+          </div>
+          <p class="text-lg text-orange-500 font-medium">£25</p>
         </div>
-        <p class="text-lg text-orange-500 font-medium">£25</p>
+        <div class="border-2 rounded-md flex items-center justify-between p-2">
+          <div>
+            <h3 class="text-2xl font-medium">Double Walk</h3>
+            <h4 class="text-1xl italic">1 Dog same day</h4>
+          </div>
+          <p class="text-lg text-orange-500 font-medium">£25</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
