@@ -6,8 +6,7 @@ import KeyPoints from "src/pages/key_Points.astro";
 import Gallery from "./gallery.astro";
 
 import Testimonials from "src/pages/testermonials.astro";
-import Services_prices from "@/pages/services_Prices.astro";
-import Pricing from "../storyblok/Pricing.astro";
+import Services_prices from "@/storyblok/services_Prices.astro";
 
 import "@/styles/global.css";
 import { useStoryblokApi } from "@storyblok/astro";
@@ -30,8 +29,7 @@ const story = data.story;
     <!-- <Services_prices /> -->
     <!-- <Pricing/> -->
     <StoryblokComponent blok={story.content}>
-      <Services_prices/>
-      <Pricing />
+      <Services_prices  />
     </StoryblokComponent>
   </section>
   <section id="services" class="mt-18 md:pt-28">

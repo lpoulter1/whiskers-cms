@@ -16,8 +16,7 @@ export default defineConfig({
       components: {
         page: "storyblok/Page",
         grid: "storyblok/Grid",
-        pricing: "storyblok/Pricing",
-        services_Prices: "pages/services_Prices",
+        services_Prices: "storyblok/services_Prices",
 
       },
     }),

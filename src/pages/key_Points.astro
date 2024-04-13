@@ -1,6 +1,12 @@
 ---
 import { Image } from "astro:assets";
 import welfare_icon from "src/assets/icons/icons8-welfare-50.png";
+import welfare_icon_white from "src/assets/icons/icons8-welfare-50-white.png";
+import welfare_icon_orange from "src/assets/icons/icons8-welfare-50_orange.png";
+import welfare_icon_Dorange from "src/assets/icons/icons8-welfare-50_do.png";
+import welfare_icon_teal from "src/assets/icons/icons8-welfare-50-teal.png";
+import dog_icon_teal from "src/assets/icons/icons8-dog-50-teal.png";
+
 import cert_icon from "../assets/icons/icons8-qualification-68.png";
 import dog_icon from "../assets/icons/icons8-dog-50.png";
 import van_icon from "../assets/icons/icons8-van-50.png";
@@ -9,50 +15,74 @@ import nature_icon from "../assets/icons/icons8-environment-50.png";
 
 <section class="m-2 flex flex-col gap-5 justify-center lg:grid lg:grid-cols-5">
   <div
-    class="flex flex-col items-center gap-3 p-2 border-2 shadow rounded-xl bg-slate-100"
+    class="flex flex-col items-center gap-3 p-2 border-2 border-neutral-400  shadow rounded-xl bg-neutral-50"
   >
-    <Image
+    <!-- <Image
       src={welfare_icon}
       alt="hands holding a heart icon"
       width={80}
       height={80}
+    /> -->
+    <!-- <Image
+      src={welfare_icon_white}
+      alt="hands holding a heart icon"
+      width={80}
+      height={80}
     />
-    <h3 class="text-2xl text-orange-500 uppercase">Welfare</h3>
-    <p class="text-lg text-center">
+    <Image
+      src={welfare_icon_orange}
+      alt="hands holding a heart icon"
+      width={80}
+      height={80}
+    /> -->
+    <Image
+      src={welfare_icon_teal}
+      alt="hands holding a heart icon"
+      width={80}
+      height={80}
+    />
+    <h3 class="text-2xl font-semibold text-neutral-500 uppercase">Welfare</h3>
+    <p class="text-lg font-medium text-center text-neutral-900">
       Passionate about animal physiology and behaviour and welfare, with a
       background in Biology.
     </p>
   </div>
-  <div class="flex flex-col items-center gap-3 p-2 border-2 shadow rounded-xl">
+  <div
+    class="flex flex-col items-center gap-3 p-2 border-2 border-slate-100 bg-slate-50 shadow rounded-xl"
+  >
     <Image src={cert_icon} alt="certificate icon" width={80} height={80} />
-    <h3 class="text-2xl text-orange-500 uppercase">Experiance</h3>
-    <p class="text-lg text-center">
+    <h3 class="text-2xl font-semibold text-neutral-600 uppercase">
+      Experiance
+    </h3>
+    <p class="text-lg font-medium text-center text-neutral-900">
       Fully insured and registered with Brighton and Hove Council.
       Qualifications including canine first aid, DBS check, and professional dog
       walking training.
     </p>
   </div>
   <div
-    class="flex flex-col items-center gap-3 p-2 border-2 shadow rounded-xl bg-slate-100"
+    class="flex flex-col items-center gap-3 p-2 border-2 border-slate-100 shadow rounded-xl bg-neutral-50"
   >
-    <Image src={dog_icon} alt="dog icon" width={80} height={80} />
-    <h3 class="text-2xl text-orange-500">DOGS</h3>
-    <p class="text-lg text-center">
-      Small and medium sized breeds only. Dogs enjoy small group walks with
-      friendly companions, returning home relaxed. Safety and individualised
-      attention are prioritised.
+    <Image src={dog_icon_teal} alt="dog icon" width={80} height={80} />
+    <h3 class="text-2xl font-semibold text-neutral-600">DOGS</h3>
+    <p class="text-lg font-medium text-center text-neutral-900">
+      Small sized breeds only. Dogs enjoy small group walks with friendly
+      companions, returning home relaxed. Safety and individualised attention
+      are prioritised.
     </p>
   </div>
-  <div class="flex flex-col items-center gap-3 p-2 border-2 shadow rounded-xl">
+  <div
+    class="flex flex-col items-center gap-3 p-2 border-2 border-slate-100 shadow rounded-xl bg-slate-50"
+  >
     <Image src={van_icon} alt="van icon" width={80} height={80} />
-    <h3 class="text-2xl text-orange-500 uppercase">van</h3>
-    <p class="text-lg text-center">
+    <h3 class="text-2xl font-semibold text-neutral-600 uppercase">van</h3>
+    <p class="text-lg font-medium text-center text-neutral-900">
       Equipped with a specially adapted, air-conditioned/heated van approved by
       Brighton & Hove Council for dog comfort and safety.
     </p>
   </div>
   <div
-    class="flex flex-col items-center gap-3 p-2 border-2 shadow rounded-xl bg-slate-100"
+    class="flex flex-col items-center gap-3 p-2 border-2 border-slate-100 shadow rounded-xl bg-neutral-50"
   >
     <Image
       src={nature_icon}
@@ -60,8 +90,8 @@ import nature_icon from "../assets/icons/icons8-environment-50.png";
       width={80}
       height={80}
     />
-    <h3 class="text-2xl text-orange-500 uppercase">nature</h3>
-    <p class="text-lg text-center">
+    <h3 class="text-2xl font-semibold text-neutral-600 uppercase">nature</h3>
+    <p class="text-lg font-medium text-center text-neutral-900">
       Committed to environmental responsibility through the use of biodegradable
       products.
     </p>
