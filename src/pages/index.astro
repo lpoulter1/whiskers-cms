@@ -2,26 +2,43 @@
 import Layout from "./layout.astro";
 
 import Home from "./home.astro";
-import ServicesPrices from "src/pages/servicesPrices.astro";
 import KeyPoints from "src/pages/key_Points.astro";
 import Gallery from "./gallery.astro";
 
 import Testimonials from "src/pages/testermonials.astro";
-import Services_landscape from "src/pages/SP_landscape.astro";
+import Services_prices from "@/storyblok/services_Prices.astro";
 
 import "@/styles/global.css";
+import { useStoryblokApi } from "@storyblok/astro";
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
+
+const storyblokApi = useStoryblokApi();
+const { data } = await storyblokApi.get("cdn/stories/home", {
+  version: "draft",
+});
+
+const story = data.story;
 ---
 
 <Layout title="Home Page">
-  <section id="home" class="mt-20 border-2">
+  <section id="home" class="pt-8 md:pt-16">
     <Home />
   </section>
 
-  <Services_landscape />
-
-  <KeyPoints />
-
-  <Testimonials />
-
-  <Gallery />
+  <section id="services" class="mt-18 md:pt-28">
+    <!-- <Services_prices /> -->
+    <!-- <Pricing/> -->
+    <StoryblokComponent blok={story.content}>
+      <Services_prices  />
+    </StoryblokComponent>
+  </section>
+  <section id="services" class="mt-18 md:pt-28">
+    <KeyPoints />
+  </section>
+  <section id="testimonials" class="mt-18 md:pt-28">
+    <Testimonials />
+  </section>
+  <section id="gallery" class="mt-18 md:pt-28">
+    <Gallery />
+  </section>
 </Layout>

@@ -15,6 +15,7 @@ module.exports = {
       center: true,
       // padding: "2rem",
       padding: 0,
+      
       // padding: {
       //   DEFAULT: "0", // padding for 'sm' and smaller screens
       //   // md: '2rem', // padding for 'md' and larger screens
@@ -45,4 +46,5 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
+  
 };
