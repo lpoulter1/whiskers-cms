@@ -8,11 +8,10 @@ import {
   NavigationMenuTrigger,
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
-import {facebookIcon} from "public/icons8-facebook-50.png";
 
 export default function NavbarShadcn() {
   return (
-    <nav className="flex items-center bg-white  bg-teal-500 text-neutral-900 ">
+    <nav className="flex items-center bg-white border-b-2 bg-teal-500 text-neutral-900 ">
     
       <div className="basis-full p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-orange-600 ">
         <a href="#home">Waggles & Whiskers</a>
@@ -51,16 +50,7 @@ export default function NavbarShadcn() {
                 Gallery
               </NavigationMenuLink>
             </NavigationMenuItem>
-            <NavigationMenuItem class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-orange-600">
-              <NavigationMenuLink
-                className="NavigationMenuLink"
-                href="https://www.facebook.com" // replace with actual Facebook page URL
-                target="_blank" // opens the link in a new tab
-                rel="noopener noreferrer" // security measure for opening new tabs
-              >
-                <icon>{facebookIcon}</icon>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
+            
           </NavigationMenuList>
         </NavigationMenu>
       </div>
