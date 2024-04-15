@@ -11,27 +11,24 @@ import image8 from "../assets/images/image-gallery/8.jpeg";
 import image9 from "../assets/images/image-gallery/9.jpeg";
 ---
 
-<section id="gallery">
-  <!-- map over images taken from Storyblok -->
-  <div class="grid grid-cols-[] gap-4">
-    <Image src={image1} alt="" inferSize class="object-cover w-full h-full" />
-    <Image src={image2} alt="" inferSize class="object-cover w-full h-full" />
-    <Image src={image3} alt="" inferSize class="object-cover w-full h-full" />
-    <Image src={image4} alt="" inferSize class="object-cover w-full h-full" />
-    <Image src={image5} alt="" inferSize class="object-cover w-full h-full" />
-    <Image src={image6} alt="" inferSize class="object-cover w-full h-full" />
-    <Image src={image7} alt="" inferSize class="object-cover w-full h-full" />
-    <Image src={image8} alt="" inferSize class="object-cover w-full h-full" />
-    <Image src={image9} alt="" inferSize class="object-cover w-full h-full" />
-  </div>
+<section id="dog-gallery">
+  <!-- TODO: map over images taken from Storyblok -->
+  <Image src={image1} alt="" class="object-cover w-full h-full" />
+  <Image src={image2} alt="" class="object-cover w-full h-full" />
+  <Image src={image3} alt="" class="object-cover w-full h-full" />
+  <Image src={image4} alt="" class="object-cover w-full h-full" />
+  <Image src={image5} alt="" class="object-cover w-full h-full" />
+  <Image src={image6} alt="" class="object-cover w-full h-full" />
+  <Image src={image7} alt="" class="object-cover w-full h-full" />
+  <Image src={image8} alt="" class="object-cover w-full h-full" />
+  <Image src={image9} alt="" class="object-cover w-full h-full" />
 </section>
 
 <style>
-  #gallery {
-    div {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1rem;
-    }
+  #dog-gallery {
+    display: grid;
+    /* this is a big ugly todo in tailwind so using css directly */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
   }
 </style>
