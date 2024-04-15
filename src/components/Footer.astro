@@ -1,25 +1,26 @@
 ---
 import { Image } from "astro:assets";
-import facebookIcon from "src/assets/icons/icons8-facebook-50 (1).png";
+import facebookIcon from "public/icons8-facebook-50.png";
 ---
 
-<footer class="flex items-center bg-white shadow-md my-2">
-  <div class="basis-full">
+<footer class="flex items-center my-2">
+  <div class="basis-full p-3 p-3 text-orange-500 font-medium">
     <big> 07875 291157 </big>
   </div>
-  <div class="flex justify-center basis-full">
+  <div class="flex justify-center text-neutral-900 basis-full p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-orange-600">
     <big>
       <a href="mailto:#">waggleswhiskers@gmail.com</a>
     </big>
   </div>
-  <div class="basis-full flex justify-end">
+  <div class="basis-full flex justify-end transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:text-orange-600">
     <big>
-      <a href="https://www.facebook.com/waggleswhiskers/" target="_blank">
+      <a href="https://www.facebook.com/waggleswhiskers/" target="_blank" >
         <Image
           src={facebookIcon}
           alt="Waggles & Whiskers"
           width={60}
           height={60}
+          
         /></a
       >
     </big>
