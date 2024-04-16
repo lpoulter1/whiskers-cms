@@ -10,13 +10,14 @@ import { HamburgerMenuIcon, Cross1Icon } from "@radix-ui/react-icons";
 
 export default function NavbarShadcnDrop() {
   return (
-    <section className="flex gap-3 justify-between items-center m-2 bg-white p-2">
-      <a href="#home">Waggles & Whiskers</a>
+    <section className="flex gap-3 justify-between items-center m-4 bg-white p-2 ">
+      <a href="#home" className="font-medium">Waggles & Whiskers</a>
       <img
-        className="hidden size-20 md:block"
+        className="hidden size-20 md:block "
         src="/logo.jpg"
         alt="Waggles & Whiskers"
       />
+      
 
       <DropdownMenu>
         <DropdownMenuTrigger className="open:hidden">

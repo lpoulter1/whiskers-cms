@@ -1,0 +1,45 @@
+---
+import upArrow from "@/assets/icons/icons8-chevron-60.png";
+import { Image } from "astro:assets";
+---
+
+<section>
+  <button
+    id="myBtn"
+    title="Go to top"
+    class="fixed hidden bottom-20 right-0 z-50 rounded-full bg-orange-500 p-3 text-white hover:bg-orange-600 opacity-60	"
+  >
+    <Image 
+    src={upArrow} 
+    alt="descriptive text" 
+    width={50} 
+    height={50} 
+    class="w-6 h-6"
+    />
+  </button>
+
+  <script>
+    let mybutton = document.querySelector("#myBtn") as HTMLElement;
+    // When the user scrolls down 200px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction();
+    };
+
+    function scrollFunction() {
+      if (
+        document.body.scrollTop > 200 ||
+        document.documentElement.scrollTop > 200
+      ) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    mybutton.addEventListener("click", () => {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    });
+  </script>
+</section>

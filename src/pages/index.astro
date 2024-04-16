@@ -7,6 +7,7 @@ import Gallery from "./gallery.astro";
 
 import Testimonials from "src/pages/testermonials.astro";
 import Services_prices from "@/storyblok/services_Prices.astro";
+import BackToTop from "@/components/backToTop.astro";
 
 import "@/styles/global.css";
 import { useStoryblokApi } from "@storyblok/astro";
@@ -25,6 +26,7 @@ const story = data.story;
     <Home />
   </section>
 
+  
   <section id="services" class="mt-18 md:pt-28">
     <!-- <Services_prices /> -->
     <!-- <Pricing/> -->
@@ -41,4 +43,7 @@ const story = data.story;
   <section id="gallery" class="mt-18 md:pt-28">
     <Gallery />
   </section>
+  <BackToTop />
+ 
 </Layout>
+
