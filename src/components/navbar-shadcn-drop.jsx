@@ -24,9 +24,9 @@ export default function NavbarShadcnDrop() {
           <button className="btn btn-primary ">
             <HamburgerMenuIcon className="" />
           </button>
-          <button className="btn btn-primary  ">
+          {/* <button className="btn btn-primary  ">
             <Cross1Icon className=""  />
-          </button>
+          </button> */}
         </DropdownMenuTrigger>
         <DropdownMenuContent>
           <DropdownMenuItem>
@@ -36,7 +36,7 @@ export default function NavbarShadcnDrop() {
             <a href="#testimonials">Testimonials</a>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <a href="#gallery">Gallery</a>
+            <a href="#dog-gallery">Gallery</a>
           </DropdownMenuItem>
           <DropdownMenuSeparator />
           {/* <DropdownMenuItem>

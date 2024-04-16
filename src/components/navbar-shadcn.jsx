@@ -52,7 +52,7 @@ export default function NavbarShadcn() {
             <NavigationMenuItem class="transition ease-in-out hover:-translate-y-0.5 hover:scale-110 hover:text-orange-600">
               <NavigationMenuLink
                 className="NavigationMenuLink"
-                href="#gallery"
+                href="#dog-gallery"
               >
                 Gallery
               </NavigationMenuLink>
