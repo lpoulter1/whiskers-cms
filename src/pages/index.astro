@@ -3,8 +3,7 @@ import Layout from "./layout.astro";
 
 import Home from "./home.astro";
 import KeyPoints from "src/pages/key_Points.astro";
-import Gallery from "./gallery.astro";
-
+import Gallery from "@/storyblok/ImageGallery.astro";
 import Testimonials from "src/pages/testermonials.astro";
 import Services_prices from "@/storyblok/services_Prices.astro";
 
@@ -29,7 +28,7 @@ const story = data.story;
     <!-- <Services_prices /> -->
     <!-- <Pricing/> -->
     <StoryblokComponent blok={story.content}>
-      <Services_prices  />
+      <Services_prices />
     </StoryblokComponent>
   </section>
   <section id="services" class="mt-18 md:pt-28">

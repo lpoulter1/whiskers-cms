@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import { useStoryblokApi } from "@storyblok/astro";
+
+const storyblokApi = useStoryblokApi();
+const { data } = await storyblokApi.get("cdn/stories/home", {
+  version: "draft",
+});
+
+const galleryImages = data.story.content.body.filter(
+  (b) => b.component === "image-gallery"
+);
+
+const maxImagesToShow = 8;
+const imagesToShow = galleryImages[0].image.slice(0, maxImagesToShow);
+---
+
+<section id="dog-gallery">
+  {
+    imagesToShow.map((img) => (
+      <Image
+        src={img.filename}
+        alt=""
+        class="object-cover w-full h-full"
+        inferSize={true}
+      />
+    ))
+  }
+</section>
+
+<style>
+  #dog-gallery {
+    display: grid;
+    /* this is a big ugly todo in tailwind so using css directly */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+</style>
