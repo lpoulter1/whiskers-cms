@@ -7,7 +7,6 @@ import { loadEnv } from "vite";
 import basicSsl from "@vitejs/plugin-basic-ssl";
 const env = loadEnv("", process.cwd(), "STORYBLOK");
 
-
 // https://astro.build/config
 export default defineConfig({
   integrations: [
@@ -17,7 +16,7 @@ export default defineConfig({
         page: "storyblok/Page",
         grid: "storyblok/Grid",
         services_Prices: "storyblok/services_Prices",
-
+        "image-gallery": "storyblok/ImageGallery",
       },
     }),
     tailwind({
