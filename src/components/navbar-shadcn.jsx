@@ -33,7 +33,7 @@ export default function NavbarShadcn() {
       <div className="basis-full flex justify-end p-3">
         <NavigationMenu>
           <NavigationMenuList className="flex flex-grow justify-evenly items-center gap-5 ">
-            <NavigationMenuItem class="transition ease-in-out hover:-translate-y-0.5 hover:scale-110 hover:text-orange-600 ">
+            <NavigationMenuItem className="transition ease-in-out hover:-translate-y-0.5 hover:scale-110 hover:text-orange-600 ">
               <NavigationMenuLink
                 className="NavigationMenuLink"
                 href="#services"
@@ -41,7 +41,7 @@ export default function NavbarShadcn() {
                 Services & Prices
               </NavigationMenuLink>
             </NavigationMenuItem>
-            <NavigationMenuItem class="transition ease-in-out hover:-translate-y-0.5 hover:scale-110 hover:text-orange-600">
+            <NavigationMenuItem className="transition ease-in-out hover:-translate-y-0.5 hover:scale-110 hover:text-orange-600">
               <NavigationMenuLink
                 className="NavigationMenuLink"
                 href="#testimonials"
@@ -49,10 +49,10 @@ export default function NavbarShadcn() {
                 Testimonials
               </NavigationMenuLink>
             </NavigationMenuItem>
-            <NavigationMenuItem class="transition ease-in-out hover:-translate-y-0.5 hover:scale-110 hover:text-orange-600">
+            <NavigationMenuItem className="transition ease-in-out hover:-translate-y-0.5 hover:scale-110 hover:text-orange-600">
               <NavigationMenuLink
                 className="NavigationMenuLink"
-                href="#gallery"
+                href="#dog-gallery"
               >
                 Gallery
               </NavigationMenuLink>

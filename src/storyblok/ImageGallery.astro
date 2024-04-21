@@ -1,21 +1,14 @@
 ---
 import { Image } from "astro:assets";
-import { useStoryblokApi } from "@storyblok/astro";
+import { storyblokEditable } from "@storyblok/astro";
 
-const storyblokApi = useStoryblokApi();
-const { data } = await storyblokApi.get("cdn/stories/home", {
-  version: "draft",
-});
-
-const galleryImages = data.story.content.body.filter(
-  (b) => b.component === "image-gallery"
-);
+const { blok } = Astro.props;
 
 const maxImagesToShow = 8;
-const imagesToShow = galleryImages[0].image.slice(0, maxImagesToShow);
+const imagesToShow = blok.image.slice(0, maxImagesToShow);
 ---
 
-<section id="dog-gallery">
+<section {...storyblokEditable(blok)} id="dog-gallery">
   {
     imagesToShow.map((img) => (
       <Image
