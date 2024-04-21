@@ -24,13 +24,14 @@ const story = data.story;
     <Home />
   </section>
 
-  <section id="services" class="mt-18 md:pt-28">
-    <!-- <Services_prices /> -->
-    <!-- <Pricing/> -->
-    <StoryblokComponent blok={story.content}>
+  <StoryblokComponent blok={story.content}>
+    <section id="services" class="mt-18 md:pt-28">
       <Services_prices />
-    </StoryblokComponent>
-  </section>
+    </section>
+    <section id="gallery" class="mt-18 md:pt-28">
+      <Gallery />
+    </section>
+  </StoryblokComponent>
   <section id="services" class="mt-18 md:pt-28">
     <KeyPoints />
   </section>
