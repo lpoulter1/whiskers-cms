@@ -4,12 +4,12 @@ import "../styles/global.css";
 interface Props {
   title: string;
   description: string;
-  image?: string;
+ 
 }
 
 // const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = "/public/van-OG.jpg" } = Astro.props;
+const { title, description } = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -35,11 +35,12 @@ const { title, description, image = "/public/van-OG.jpg" } = Astro.props;
 <meta property="og:url" content="https://wagglesandwhiskers.co.uk" />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<!-- <meta property="og:image" content={new URL(image, Astro.url)} /> -->
+<meta property="og:image" content="/van-OG.jpg" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<!-- <meta property="twitter:image" content={new URL(image, Astro.url)} /> -->
