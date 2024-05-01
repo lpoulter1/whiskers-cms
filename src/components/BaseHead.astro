@@ -5,12 +5,11 @@ interface Props {
   title: string;
   description: string;
   image?: string;
-  url: string;
 }
 
 // const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = "/blog-placeholder-1.jpg", url} = Astro.props;
+const { title, description, image = "/blog-placeholder-1.jpg" } = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -33,13 +32,11 @@ const { title, description, image = "/blog-placeholder-1.jpg", url} = Astro.prop
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
+<meta property="og:url" content="https://wagglesandwhiskers.co.uk" />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
-
-<meta property="og:image" content="https://wagglesandwhiskers.co.uk/images/og-image.jpg" />
-
+<!-- <meta property="og:image" content={new URL(image, Astro.url)} /> -->
+<meta property="og:image" content="public/van-OG.jpg" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
