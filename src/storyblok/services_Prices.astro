@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import logoSrc from "public/images/WhatsApp.jpeg";
+import taraImage from "public/images/tara-poppy.jpeg";
 import { storyblokEditable } from "@storyblok/astro";
 const { blok } = Astro.props;
 ---
@@ -19,10 +19,10 @@ const { blok } = Astro.props;
       deserves affordable care tailored just for them!
     </h2>
 
-    <div class="flex flex-col justify-around lg:m-10 lg:flex-row">
+    <div class="flex flex-col justify-around lg:m-10 lg:flex-row ">
       <Image
         class="flex object-contain self-center"
-        src={logoSrc}
+        src={taraImage}
         alt="dog"
         width={400}
         height={400}
@@ -30,16 +30,16 @@ const { blok } = Astro.props;
 
       <!-- prices table from storyblok -->
       <div
-        class="flex flex-col m-2 gap-5 text-left lg:p-5 lg:grid lg:col-span-3 lg:justify-center"
+        class="flex flex-col m-2 gap-5 text-left lg:p-5 lg:grid lg:col-span-3 w-5/12"
       >
         {
           blok.prices_table.tbody.map((row, index) => (
             <div
               id={index}
-              class="border-2 border-neutral-200 rounded-md flex items-center justify-between lg:gap-14 p-2 bg-neutral-50"
+              class="border-2 border-neutral-200 rounded-md flex items-center justify-between px-6 p-2 lg:gap-14 bg-neutral-50 "
             >
               <div class="flex flex-col">
-                <div class="text-2xl text-neutral-900 font-medium">
+                <div class="text-2xl text-neutral-900 font-medium " >
                   {row.body[0].value}
                 </div>
                 <div class="text-1xl italic text-neutral-500">
