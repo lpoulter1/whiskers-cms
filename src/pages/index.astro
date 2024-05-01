@@ -23,19 +23,20 @@ const story = data.story;
   <section id="home" class="pt-8 md:pt-16">
     <Home />
   </section>
-
+  <!-- margin tops for layout are inside compnents for sotryblok -->
   <StoryblokComponent blok={story.content}>
-    <section id="services" class="mt-18 md:pt-28">
+    <section>
       <Services_prices />
     </section>
-    <section id="gallery" class="mt-18 md:pt-28">
+    <section>
       <Gallery />
     </section>
   </StoryblokComponent>
-  <section id="services" class="mt-18 md:pt-28">
+  <section class="mt-14 md:mt-20">
     <KeyPoints />
   </section>
-  <section id="testimonials" class="mt-18 md:pt-28">
+  <section id="testimonials" class=" pt-14 md:pt-24">
+    <!-- <section id="testimonials" class="mt-18 md:pt-28 "> -->
     <Testimonials />
   </section>
 </Layout>
