@@ -32,10 +32,10 @@ export default function NavbarShadcnDrop() {
             <a href="#services">Services & Prices</a>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <a href="#testimonials">Testimonials</a>
+            <a href="#dog-gallery">Gallery</a>
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <a href="#gallery">Gallery</a>
+            <a href="#testimonials">Testimonials</a>
           </DropdownMenuItem>
           <DropdownMenuSeparator />
           {/* <DropdownMenuItem>

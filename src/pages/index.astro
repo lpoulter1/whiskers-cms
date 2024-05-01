@@ -25,22 +25,18 @@ const story = data.story;
   </section>
   <!-- margin tops for layout are inside compnents for sotryblok -->
   <StoryblokComponent blok={story.content}>
-    <section id="services" class="border-2">
+    <section>
       <Services_prices />
     </section>
-    <section
-      id="gallery"
-      class="border-2 border-blue-500 mt-20"
-    >
+    <section>
       <Gallery />
     </section>
   </StoryblokComponent>
   <section class="mt-14 md:mt-20">
     <KeyPoints />
   </section>
-  <section id="testimonials" class="mt-14 md:mt-20" >
+  <section id="testimonials" class=" pt-14 md:pt-24">
     <!-- <section id="testimonials" class="mt-18 md:pt-28 "> -->
     <Testimonials />
   </section>
-  
 </Layout>
