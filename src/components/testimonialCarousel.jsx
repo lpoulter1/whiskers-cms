@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -17,12 +16,12 @@ export default function TestimonialsCarousel() {
     const nextReview = i + 1 < reviews.length ? reviews[i + 1] : null;
 
     carouselItems.push(
-      <CarouselItem key={i} className="items-center justify-evenly ">
+      <CarouselItem key={i} className="items-center justify-evenly">
         <div className="flex  gap-10 flex-col md:flex-row">
           <div className="md:w-1/2 ">
-            <Card className="h-96 w-96 content-center bg-neutral-50">
+            <Card className="h-96 w-96 content-center bg-neutral-50 ">
               <CardContent className=" ">
-                <div className="flex flex-col gap-5 m-5 items-center h-3/6  ">
+                <div className="flex flex-col gap-5 m-5 items-center h-3/6">
                   <p className="text-center text-neutral-900 font-medium">
                     "{review.text}"
                   </p>
@@ -79,10 +78,10 @@ export default function TestimonialsCarousel() {
         <Carousel className="">
           <CarouselContent className=" ">
             {reviews.map((review, index) => (
-              <CarouselItem key={index} className=" ">
+              <CarouselItem key={index} className="flex place-items-center">
                 <div className="">
                   <Card className="bg-neutral-50">
-                    <CardContent className=" ">
+                    <CardContent className="">
                       <div className=" flex flex-col gap-3">
                         <p className="text-center">{review.text}</p>
                         <div className="flex flex-col text-center items-center ">
