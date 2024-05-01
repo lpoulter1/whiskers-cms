@@ -8,7 +8,7 @@ const { blok } = Astro.props;
 <div {...storyblokEditable(blok)} class="">
   <!-- SERVICES & PRICES  --><!-- map over prices taken from Storyblok -->
   <!--  <StoryblokComponent blok={story.content}>  </StoryblokComponent> -->
-  <section id="services" class="flex flex-col gap-10 pt-24 ">
+  <section id="services" class="flex flex-col gap-10 pt-24">
     <h1
       class="text-5xl text-neutral-900 col-span-4 text-center tracking-widest"
     >
@@ -19,7 +19,7 @@ const { blok } = Astro.props;
       deserves affordable care tailored just for them!
     </h2>
 
-    <div class="flex flex-col justify-around lg:m-10 lg:flex-row ">
+    <div class="flex flex-col justify-around lg:m-10 lg:flex-row">
       <Image
         class="flex object-contain self-center"
         src={taraImage}
@@ -30,7 +30,7 @@ const { blok } = Astro.props;
 
       <!-- prices table from storyblok -->
       <div
-        class="flex flex-col m-2 gap-5 text-left lg:p-5 lg:grid lg:col-span-3 w-4/12"
+        class="flex flex-col m-2 gap-5 text-left lg:p-5 lg:grid lg:col-span-3 md:w-4/12"
       >
         {
           blok.prices_table.tbody.map((row, index) => (
@@ -39,7 +39,7 @@ const { blok } = Astro.props;
               class="border-2 border-neutral-200 rounded-md flex items-center justify-between px-6 p-2 lg:gap-14 bg-neutral-50 "
             >
               <div class="flex flex-col">
-                <div class="text-2xl text-neutral-900 font-medium " >
+                <div class="text-2xl text-neutral-900 font-medium ">
                   {row.body[0].value}
                 </div>
                 <div class="text-1xl italic text-neutral-500">
