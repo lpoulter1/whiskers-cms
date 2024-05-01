@@ -4,17 +4,43 @@ import { storyblokEditable } from "@storyblok/astro";
 
 const { blok } = Astro.props;
 
-const maxImagesToShow = 8;
-const imagesToShow = blok.image.slice(0, maxImagesToShow);
+const maxImagesToShowSM = 4;
+const maxImagesToShowMD = 6;
+const maxImagesToShowLG = 12;
+const imagesToShowSM = blok.image.slice(0, maxImagesToShowSM);
+const imagesToShowMD = blok.image.slice(0, maxImagesToShowMD);
+const imagesToShowLG = blok.image.slice(0, maxImagesToShowLG);
 ---
 
-<section {...storyblokEditable(blok)} id="dog-gallery" class="pt-24" >
+<section {...storyblokEditable(blok)} id="dog-gallery" class="pt-24">
   {
-    imagesToShow.map((img) => (
+    imagesToShowSM.map((img) => (
       <Image
         src={img.filename}
         alt=""
-        class="object-cover w-full h-full"
+        class="block md:hidden object-cover w-full h-full object-contain rounded-md md:m-3"
+        inferSize={true}
+      />
+    ))
+  }
+
+  {
+    imagesToShowMD.map((img) => (
+      <Image
+        src={img.filename}
+        alt=""
+        class="hidden md:block lg:hidden object-cover w-full h-full object-contain rounded-md md:m-3"
+        inferSize={true}
+      />
+    ))
+  }
+
+{
+    imagesToShowLG.map((img) => (
+      <Image
+        src={img.filename}
+        alt=""
+        class="hidden lg:block object-cover  w-full h-full object-contain rounded-md md:m-3"
         inferSize={true}
       />
     ))
