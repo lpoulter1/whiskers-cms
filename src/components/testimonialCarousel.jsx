@@ -22,7 +22,7 @@ export default function TestimonialsCarousel() {
             <Card className="h-96 w-96 content-center bg-neutral-50 ">
               <CardContent className=" ">
                 <div className="flex flex-col gap-5 m-5 items-center h-3/6">
-                  <p className="text-center text-neutral-900 font-medium">
+                  <p className="text-center text-neutral-900 font-medium text-sm">
                     "{review.text}"
                   </p>
                   <div className="flex flex-col text-center items-center">
@@ -45,7 +45,7 @@ export default function TestimonialsCarousel() {
               <Card className="h-96 w-96 content-center  bg-neutral-50">
                 <CardContent className="">
                   <div className="flex flex-col gap-5 m-5 items-center h-3/6">
-                    <p className="text-center text-neutral-900 font-medium">
+                    <p className="text-center text-neutral-900 font-medium text-sm ">
                       "{nextReview.text}"
                     </p>
                     <div className="flex flex-col text-center items-center">
