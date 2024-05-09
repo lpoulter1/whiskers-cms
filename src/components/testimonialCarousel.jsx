@@ -107,7 +107,7 @@ export default function TestimonialsCarousel() {
         </Carousel>
       </div>
 
-      <div className="hidden md:block md:flex justify-center">
+      <div className="hidden md:flex justify-center">
         <Carousel className=" max-w-4xl flex ">
           <CarouselContent className="flex">{carouselItems}</CarouselContent>
           <CarouselPrevious />

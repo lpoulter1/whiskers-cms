@@ -11,7 +11,7 @@ import {
 
 export default function NavbarShadcn() {
   return (
-    <nav className="flex items-center bg-white border-b-2 bg-teal-500 text-neutral-900 ">
+    <nav className="flex items-center bg-white border-b-2 text-neutral-900 ">
       <div className="basis-full p-3 ">
         <NavigationMenu>
           <NavigationMenuList>

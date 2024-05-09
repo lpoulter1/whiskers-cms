@@ -20,11 +20,7 @@ export default function NavbarShadcnDrop() {
 
       <DropdownMenu>
         <DropdownMenuTrigger className="open:hidden">
-            <HamburgerMenuIcon className="size-8" />
-          
-          {/* <button className="btn btn-primary  ">
-            <Cross1Icon className=""  />
-          </button> */}
+          <HamburgerMenuIcon className="size-8" />
         </DropdownMenuTrigger>
         <DropdownMenuContent>
           <DropdownMenuItem>
@@ -37,9 +33,6 @@ export default function NavbarShadcnDrop() {
             <a href="#testimonials">Testimonials</a>
           </DropdownMenuItem>
           <DropdownMenuSeparator />
-          {/* <DropdownMenuItem>
-                    <a href="#contact">Contact</a>
-                </DropdownMenuItem> */}
         </DropdownMenuContent>
       </DropdownMenu>
     </section>
