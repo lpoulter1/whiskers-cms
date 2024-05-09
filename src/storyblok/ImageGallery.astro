@@ -1,13 +1,13 @@
 ---
 import { Image } from "astro:assets";
 import { storyblokEditable } from "@storyblok/astro";
-// import Modal from "@/components/modal.astro";
 
 const { blok } = Astro.props;
 
 const maxImagesToShow = 8;
 const imagesToShow = blok.image.slice(0, maxImagesToShow);
-const MAX_MOBILE_IMAGES = 3;
+const MAX_SM_IMAGES = 3;
+const MAX_MD_IMAGES = 6;
 ---
 
 <section
@@ -17,7 +17,17 @@ const MAX_MOBILE_IMAGES = 3;
 >
   {
     imagesToShow.map((img, index) => {
-      if (index >= MAX_MOBILE_IMAGES) {
+      if (index >= MAX_SM_IMAGES) {
+        if (index >= MAX_MD_IMAGES) {
+          return (
+            <Image
+              src={img.filename}
+              alt=""
+              class="hidden object-cover w-full h-full lg:block"
+              inferSize={true}
+            />
+          );
+        }
         return (
           <Image
             src={img.filename}
