@@ -6,19 +6,14 @@ const { blok } = Astro.props;
 ---
 
 <div {...storyblokEditable(blok)} class="">
-  <section id="services" class="flex flex-col gap-10 pt-24 ">
-
+  <section id="services" class="flex flex-col gap-10 pt-24">
     <h1
       class="text-5xl text-neutral-900 col-span-4 text-center tracking-widest"
     >
       Services & <span class="text-orange-500">Prices</span>
     </h1>
-    <h2 class="text-xl text-neutral-900 col-span-4 text-center tracking-wide">
-      Discover our furry-friendly pricing options, because every wag and whisker
-      deserves affordable care tailored just for them!
-    </h2>
 
-    <div class="flex flex-col justify-around  lg:m-10 md:flex-row">
+    <div class="flex flex-col justify-around lg:m-10 md:flex-row">
       <Image
         class="flex object-contain self-center"
         src={taraImage}
@@ -28,7 +23,7 @@ const { blok } = Astro.props;
       />
 
       <div
-        class="flex flex-col m-2 gap-5 text-left lg:p-5 lg:grid lg:col-span-3 md:w-4/12   "
+        class="flex flex-col m-2 gap-5 text-left lg:p-5 lg:grid lg:col-span-3 md:w-4/12"
       >
         {
           blok.prices_table.tbody.map((row, index) => (
