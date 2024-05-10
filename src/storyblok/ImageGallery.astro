@@ -15,8 +15,8 @@ const MAX_MD_IMAGES = 6;
   id="dog-gallery"
   class="pt-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3"
 >
-  <dialog id="galleryDialog" class="overflow-clip">
-    <form method="dialog">
+  <dialog id="galleryDialog" class="overflow-clip  aspect-[4/3]">
+    <form method="dialog" class="aspect-[4/3] ">
       <!-- js will put the image here -->
       <button class="absolute top-6 right-6 text-gray-700 font-bold text-2xl"
         >X</button
@@ -32,7 +32,7 @@ const MAX_MD_IMAGES = 6;
               <Image
                 src={img.filename}
                 alt=""
-                class="hidden object-contain w-full h-full lg:block"
+                class="hidden object-cover w-full h-full lg:block"
                 inferSize={true}
               />
             </button>
@@ -43,7 +43,7 @@ const MAX_MD_IMAGES = 6;
             <Image
               src={img.filename}
               alt=""
-              class="hidden object-contain w-full h-full md:block"
+              class="hidden object-cover w-full h-full md:block"
               inferSize={true}
             />
           </button>
@@ -55,7 +55,7 @@ const MAX_MD_IMAGES = 6;
           <Image
             src={img.filename}
             alt=""
-            class="object-contain w-full h-full"
+            class="object-cover w-full h-full"
             inferSize={true}
           />
         </button>
@@ -74,10 +74,10 @@ const MAX_MD_IMAGES = 6;
 
 <script>
   const galleryDialogTriggers = document.querySelectorAll(
-    ".galleryDialogTrigger"
+    ".galleryDialogTrigger",
   );
   const favDialog = document.getElementById(
-    "galleryDialog"
+    "galleryDialog",
   ) as HTMLDialogElement;
 
   galleryDialogTriggers.forEach((element) =>
@@ -88,7 +88,7 @@ const MAX_MD_IMAGES = 6;
       dialogForm.querySelector("img")?.remove();
       dialogForm.appendChild(image.cloneNode(true));
       favDialog.showModal();
-    })
+    }),
   );
 </script>
 <style>
