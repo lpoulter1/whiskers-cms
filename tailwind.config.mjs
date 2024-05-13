@@ -28,6 +28,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Quicksand Variable", ...defaultTheme.fontFamily.sans],
+        cursive: ['Amatic SC', "cursive"],
       },
       keyframes: {
         "accordion-down": {
