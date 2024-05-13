@@ -8,6 +8,7 @@ import {
   NavigationMenuTrigger,
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
+import { Image } from "astro:assets";
 
 export default function NavbarShadcn() {
   return (
@@ -17,8 +18,8 @@ export default function NavbarShadcn() {
           <NavigationMenuList>
             <NavigationMenuItem className="transition ease-in-out hover:-translate-y-0.5 hover:scale-110 hover:text-orange-600">
               <NavigationMenuLink href="#home">
-                Waggles & Whiskers
-              </NavigationMenuLink>
+                <img src="/logo_text.png" className="size-2/5" alt="waggles &whiskers" />      
+                        </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
@@ -30,7 +31,7 @@ export default function NavbarShadcn() {
           alt="Waggles & Whiskers"
         />
       </div>
-      <div className="basis-full flex justify-end p-3">
+      <div className="basis-full flex justify-end p-3 font-cursive text-3xl font-bold tracking-wide">
         <NavigationMenu>
           <NavigationMenuList className="flex flex-grow justify-evenly items-center gap-5 ">
             <NavigationMenuItem className="transition ease-in-out hover:-translate-y-0.5 hover:scale-110 hover:text-orange-600 ">
