@@ -18,7 +18,7 @@ export default function NavbarShadcn() {
           <NavigationMenuList>
             <NavigationMenuItem className="transition ease-in-out hover:-translate-y-0.5 hover:scale-110 hover:text-orange-600">
               <NavigationMenuLink href="#home">
-                <img src="/logo_text.png" className="size-2/5" alt="waggles &whiskers" />      
+                <img src="/logo_text.png" className="size-2/5" alt="waggles &whiskers" width="300" height="300" />      
                         </NavigationMenuLink>
             </NavigationMenuItem>
           </NavigationMenuList>
@@ -29,6 +29,8 @@ export default function NavbarShadcn() {
           className="hidden m-1 p-1 h-20 md:block "
           src="/Waggles & Whiskers-no-text.png"
           alt="Waggles & Whiskers"
+          width="300"
+          height="300"
         />
       </div>
       <div className="basis-full flex justify-end p-3 font-cursive text-3xl font-bold tracking-wide">
