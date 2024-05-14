@@ -29,8 +29,8 @@ export default function NavbarShadcn() {
           className="hidden m-1 p-1 h-20 md:block "
           src="/Waggles & Whiskers-no-text.png"
           alt="Waggles & Whiskers"
-          width="300"
-          height="300"
+          width="150"
+          height="150"
         />
       </div>
       <div className="basis-full flex justify-end p-3 font-cursive text-3xl font-bold tracking-wide">
