@@ -26,7 +26,7 @@ export default function NavbarShadcn() {
       </div>
       <div className="basis-full flex justify-center	">
         <img
-          className="hidden m-1 p-1 h-20 md:block "
+          className="hidden m-1 p-1 h-20 md:block size-2/6"
           src="/Waggles & Whiskers-no-text.png"
           alt="Waggles & Whiskers"
           width="150"
