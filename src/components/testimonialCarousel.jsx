@@ -32,7 +32,9 @@ export default function TestimonialsCarousel() {
                       className="rounded-full h-20 w-20 object-cover"
                       width="80" height="auto"
                     />
-                    <h3 className="text-orange-600 font-medium">
+
+                    <h3 className="text-green-700 font-medium">
+
                       {review.name}
                     </h3>
                     <h5>{review.dogBreed}</h5>
@@ -56,7 +58,9 @@ export default function TestimonialsCarousel() {
                         className="rounded-full h-20 w-20 object-cover"
                         width="80" height="auto"
                       />
-                      <h3 class="text-orange-600 font-medium">
+
+                      <h3 className="text-green-700 font-medium">
+
                         {nextReview.name}
                       </h3>
                       <h5>{nextReview.dogBreed}</h5>
@@ -93,9 +97,9 @@ export default function TestimonialsCarousel() {
                             className="rounded-full h-20 w-20 object-cover"
                             width="80" height="auto"
                           />
-                          <h4 className="text-orange-600 font-medium">
+                          <h3 className="text-green-700 font-medium">
                             {review.name}
-                          </h4>
+                          </h3>
                           <h5>{review.dogBreed}</h5>
                         </div>
                       </div>

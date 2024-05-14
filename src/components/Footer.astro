@@ -1,34 +1,42 @@
 ---
 import { Image } from "astro:assets";
-import facebookIcon from "public/icons8-facebook-50.png";
+import facebookIcon from "src/assets/icons/icons8-facebook-50_green.png";
+
+import facebookIconHover from "src/assets/icons/icons8-facebook-50_orange.png";
 ---
 
-<footer class="flex items-center bg-white my-2 border-t-2 w-full sticky bottom-0 md:relative md:mt-24 ">
-  <div class="basis-full p-3 text-neutral-900 font-medium md:text-xl ">
-    <p> 07875 291157 </p>
+<footer
+  class="flex items-center bg-white my-2 border-t-2 w-full sticky bottom-0 md:relative md:mt-24"
+>
+  <div class="basis-full p-3 text-green-700 font-medium md:text-xl">
+    <p>07875 291157</p>
   </div>
   <div
-    class="flex justify-center md:text-xl text-neutral-900 basis-full p-3 transition ease-in-out hover:-translate-y-0.5 hover:scale-110 hover:text-orange-600"
+    class="flex justify-center md:text-xl text-green-700 basis-full p-3 transition ease-in-out hover:-translate-y-0.5 hover:scale-110 hover:text-orange-600"
   >
     <p>
       <a href="mailto:#">waggleswhiskers@gmail.com</a>
     </p>
   </div>
-  <div
-    class="basis-full flex justify-end "
-  >
+
+  <div class="basis-full flex justify-end">
     <p>
-      <a href="https://www.facebook.com/waggleswhiskers/" target="_blank">
+      <a href="https://www.facebook.com/waggleswhiskers/" target="_blank" class="group">
         <Image
           src={facebookIcon}
           alt="Waggles & Whiskers"
           width={50}
           height={50}
-          class="transition ease-in-out hover:-translate-y-0.5 hover:scale-110 hover:text-orange-600"
+          class="inline-block group-hover:hidden transition ease-in-out hover:-translate-y-0.5 hover:scale-110  "
         />
-        
-        </a
-      >
+        <Image
+          src={facebookIconHover}
+          alt="Waggles & Whiskers"
+          width={50}
+          height={50}
+          class="hidden group-hover:inline-block transition ease-in-out hover:-translate-y-0.5 hover:scale-110 "
+        />
+      </a>
     </p>
-  </div>
+</div>
 </footer>

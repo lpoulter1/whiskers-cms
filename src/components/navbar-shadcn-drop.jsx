@@ -18,7 +18,7 @@ export default function NavbarShadcnDrop() {
         <DropdownMenuTrigger className="open:hidden">
           <HamburgerMenuIcon className="size-8 " />
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="text-4xl">
+        <DropdownMenuContent className="">
           <DropdownMenuItem>
             <a href="#services">Services & Prices</a>
           </DropdownMenuItem>
