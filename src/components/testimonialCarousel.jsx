@@ -30,8 +30,11 @@ export default function TestimonialsCarousel() {
                       src={review.image}
                       alt={review.imageAlt}
                       className="rounded-full h-20 w-20 object-cover"
+                      width="80" height="auto"
                     />
+
                     <h3 className="text-green-700 font-medium">
+
                       {review.name}
                     </h3>
                     <h5>{review.dogBreed}</h5>
@@ -53,8 +56,11 @@ export default function TestimonialsCarousel() {
                         src={nextReview.image}
                         alt={nextReview.imageAlt}
                         className="rounded-full h-20 w-20 object-cover"
+                        width="80" height="auto"
                       />
+
                       <h3 className="text-green-700 font-medium">
+
                         {nextReview.name}
                       </h3>
                       <h5>{nextReview.dogBreed}</h5>
@@ -89,6 +95,7 @@ export default function TestimonialsCarousel() {
                             src={review.image}
                             alt={review.imageAlt}
                             className="rounded-full h-20 w-20 object-cover"
+                            width="80" height="auto"
                           />
                           <h3 className="text-green-700 font-medium">
                             {review.name}

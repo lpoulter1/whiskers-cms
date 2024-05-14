@@ -28,7 +28,9 @@ const MAX_MD_IMAGES = 6;
       if (index >= MAX_SM_IMAGES) {
         if (index >= MAX_MD_IMAGES) {
           return (
-            <button aria-label="show larger image" class="galleryDialogTrigger">
+
+            <button class="galleryDialogTrigger" aria-label="show larger image">
+
               <Image
                 src={img.filename}
                 alt=""
