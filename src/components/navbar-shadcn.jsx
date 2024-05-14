@@ -12,7 +12,7 @@ import { Image } from "astro:assets";
 
 export default function NavbarShadcn() {
   return (
-    <nav className="flex items-center bg-white border-b-2 text-green-600 ">
+    <nav className="flex items-center bg-white border-b-2 text-green-700 ">
       <div className="basis-full p-3 ">
         <NavigationMenu>
           <NavigationMenuList>
