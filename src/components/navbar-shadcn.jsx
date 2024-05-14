@@ -31,7 +31,7 @@ export default function NavbarShadcn() {
         <img
 
           className="hidden m-1 p-1 h-20 md:block size-2/6"
-          src="/Waggles & Whiskers-no-text.png"
+          src="/Waggles&Whiskers-no-text.png"
 
           alt="Waggles & Whiskers"
           width="150"
