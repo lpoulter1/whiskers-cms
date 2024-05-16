@@ -1,30 +1,35 @@
 ---
 import { Image } from "astro:assets";
-import hero_image from "../assets/images/hero-placeholder.jpg";
+import hero_image from "public/images/hero-5.jpg";
 ---
 
 <!-- <section class="flex flex-col border-2 sm:bg-red-500"> --><!-- <div class="flex gap-2 border-2 border-red-500"> -->
 <section
   id="home"
-  class="flex flex-col items-center gap-3 border-1 lg:flex-row"
+  class="flex flex-col items-center gap-3 border-1 lg:flex-row m-5"
 >
   <!-- <div class="flex flex-col justify-center gap-6 items-center"> -->
-  <div class="flex flex-col gap-6 items-center md:m-3">
+  <div class="flex flex-col gap-8 items-center md:m-3">
     <h1 class="text-6xl text-neutral-900 tracking-widest text-center">
       <span class="text-orange-500">Friendly</span> Dog Walking in Brighton
     </h1>
-    <h2 class="text-2xl tracking-wider text-center text-neutral-800">
-      Your Pet's Happiness Starts Here: Trust Waggles and Whiskers for Expert
-      Care in Brighton!
+    <h2 class="text-xl tracking-wider text-center text-neutral-800">
+      Waggles & Whiskers is a well established and respected company based in
+      Hanover providing a professional, reliable and friendly dog walking
+      service you can trust.
     </h2>
 
     <a
-      aria-label="Email me at"
-      href="mailto:waggleswhiskers@gmail.com"
-      class="bg-orange-500 font-medium text-l shadow hover:bg-orange-600 hover:shadow-orange-600/50 active:bg-orange-700 focus:outline-none rounded-lg py-2 max-w-fit p-4 text-white tracking-wider"
+      href="mailto:#"
+      class="bg-orange-500 font-medium text-l shadow shadow-orange-500/50 hover:bg-orange-600 hover:shadow-orange-600/50 active:bg-orange-700 focus:outline-none rounded-lg py-2 max-w-fit p-4 text-white tracking-wider"
     >
       waggleswhiskers@gmail.com</a
     >
+    <!-- a tag here to phone? -->
+    <!-- <button
+      class="bg-orange-500 hover:bg-orange-600 active:bg-orange-700 focus:outline-none rounded-lg py-2 p-3 tracking-wider text-white"
+      >07875 291157</button
+    > -->
 
     <p
       class="rounded-lg py-2 p-3 tracking-wider text-orange-500 font-bold text-l border-2 border-orange-500"
@@ -35,10 +40,9 @@ import hero_image from "../assets/images/hero-placeholder.jpg";
   <Image
     src={hero_image}
     alt="owner stroking a dog"
-    class="inline"
     width={600}
     height={300}
-    class="object-contain rounded-lg shadow-lg md:m-3"
+    class="object-contain rounded-lg shadow-lg md:m-3 md:git size-3/5"
     loading="eager"
   />
 </section>
