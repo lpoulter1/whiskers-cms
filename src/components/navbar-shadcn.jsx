@@ -12,7 +12,7 @@ import { Image } from "astro:assets";
 
 export default function NavbarShadcn() {
   return (
-    <nav className="flex items-center bg-white border-b-2 text-neutral-900">
+    <nav className="flex items-center bg-white border-b-2 border-green-700 border-opacity-35 text-neutral-900">
       <div className="basis-full p-3 ">
         <NavigationMenu>
           <NavigationMenuList>
@@ -30,7 +30,7 @@ export default function NavbarShadcn() {
       <div className="basis-full flex justify-center	">
         <img
 
-          className="hidden m-1 p-1 h-20 md:block size-2/6"
+          className="hidden m-1 pb-2 b-2 h-20 md:block size-2/6"
           src="/Waggles&Whiskers-no-text.png"
 
           alt="Waggles & Whiskers"
