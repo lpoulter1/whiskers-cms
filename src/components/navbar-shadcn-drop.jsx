@@ -12,11 +12,7 @@ export default function NavbarShadcnDrop() {
     <section className="flex gap-3 justify-between items-center bg-white p-2 border-b-2 ">
     <a href="#profile ">
       <img src="/logo_text.png" className="size-2/5 inline-block group-hover:hidden" width="300" height="300" alt="waggles &whiskers" />  </a>
-      <img
-        className="hidden size-20 md:block"
-        src="/logo.jpg"
-        alt="Waggles & Whiskers"
-      />
+    
 
       <DropdownMenu>
         <DropdownMenuTrigger className="open:hidden">
