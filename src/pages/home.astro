@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import hero_image from "public/images/hero-5.jpg";
+import hero_image from "public/images/hero-5-darken.jpg";
 ---
 
 <!-- <section class="flex flex-col border-2 sm:bg-red-500"> --><!-- <div class="flex gap-2 border-2 border-red-500"> -->
@@ -8,15 +8,13 @@ import hero_image from "public/images/hero-5.jpg";
   id="home"
   class="flex flex-col items-center gap-3 border-1 lg:flex-row m-5"
 >
-  <!-- <div class="flex flex-col justify-center gap-6 items-center"> -->
-  <div class="flex flex-col gap-8 items-center md:m-3">
+  <div class="flex flex-col gap-8 items-center md:m-3 p-8">
     <h1 class="text-6xl text-neutral-900 tracking-widest text-center">
       <span class="text-orange-500">Friendly</span> Dog Walking in Brighton
     </h1>
     <h2 class="text-xl tracking-wider text-center text-neutral-800">
-      Waggles & Whiskers is a well established and respected company based in
-      Hanover providing a professional, reliable and friendly dog walking
-      service you can trust.
+      Your dogs health and hapiness comes first with Waggles & Whiskers, based
+      in Hanover, providing a professional and reliable service you can trust.
     </h2>
 
     <a
@@ -25,11 +23,6 @@ import hero_image from "public/images/hero-5.jpg";
     >
       waggleswhiskers@gmail.com</a
     >
-    <!-- a tag here to phone? -->
-    <!-- <button
-      class="bg-orange-500 hover:bg-orange-600 active:bg-orange-700 focus:outline-none rounded-lg py-2 p-3 tracking-wider text-white"
-      >07875 291157</button
-    > -->
 
     <p
       class="rounded-lg py-2 p-3 tracking-wider text-orange-500 font-bold text-l border-2 border-orange-500"
@@ -42,7 +35,7 @@ import hero_image from "public/images/hero-5.jpg";
     alt="owner stroking a dog"
     width={600}
     height={300}
-    class="object-contain rounded-lg shadow-lg md:m-3 md:size-3/5"
+    class="object-contain rounded-lg shadow-lg md:m-3 md:size-2/5"
     loading="eager"
   />
 </section>
