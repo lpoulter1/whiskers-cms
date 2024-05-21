@@ -6,6 +6,7 @@ const { title } = Astro.props;
 
 import NavbarShadcn from "../components/navbar-shadcn.jsx";
 import NavbarShadcnDrop from "../components/navbar-shadcn-drop.jsx";
+import NavbarMenu from "src/components/nav-menu.jsx";
 
 // Supports weights 300-700
 import "@fontsource-variable/quicksand";
@@ -27,8 +28,11 @@ import "@fontsource/amatic-sc";
       <NavbarShadcn client:load />
     </nav>
     <!-- <Navigation Mobile /> -->
-    <nav class="block md:hidden sticky top-0 z-10">
+    <!-- <nav class="block md:hidden sticky top-0 z-10">
       <NavbarShadcnDrop client:load />
+    </nav> -->
+    <nav class="block md:hidden sticky top-0 z-10">
+      <NavbarMenu client:load />
     </nav>
     <article>
       <slot />
