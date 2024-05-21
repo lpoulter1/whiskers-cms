@@ -1,14 +1,11 @@
 import {
   NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import { Image } from "astro:assets";
+
 
 export default function NavbarShadcn() {
   return (
@@ -17,7 +14,7 @@ export default function NavbarShadcn() {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem className="transition ease-in-out hover:-translate-y-0.5 hover:scale-110 hover:text-orange-600">
-              <NavigationMenuLink href="#home">
+              <NavigationMenuLink href="#top">
 
                  <img src="/logo_text.png" className="size-2/5 inline-block group-hover:hidden" width="300" height="300" alt="waggles &whiskers" />      
                 <img src="/logo_text_orange.png" className="size-2/5 hidden group-hover:inline-block" width="300" height="300" alt="waggles &whiskers" />      
@@ -28,6 +25,7 @@ export default function NavbarShadcn() {
         </NavigationMenu>
       </div>
       <div className="basis-full flex justify-center	">
+   
         <img
 
           className="hidden m-1 pb-2 b-2 h-20 md:block size-2/6"
