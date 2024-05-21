@@ -1,12 +1,13 @@
 ---
 import { Image } from "astro:assets";
-import hero_image from "public/images/hero-5.jpg";
+import hero_image from "public/images/hero-5-darken.jpg";
 ---
 
 <section
   id="home"
   class="flex flex-col justify-center items-center gap-3 border-1 lg:flex-row m-5"
 >
+
   <div
     class="md:hidden flex flex-col h-[calc(100vh-6rem)] items-center justify-center"
   >
@@ -29,6 +30,7 @@ import hero_image from "public/images/hero-5.jpg";
   </div>
   <div id="profile"></div>
   <div class="mt-20 flex flex-col gap-8 items-center md:m-3">
+
     <h1 class="text-6xl text-neutral-900 tracking-widest text-center">
       <span class="text-orange-500">Friendly</span> Dog Walking in Brighton
     </h1>
@@ -55,7 +57,7 @@ import hero_image from "public/images/hero-5.jpg";
     alt="owner stroking a dog"
     width={600}
     height={300}
-    class="object-contain rounded-lg shadow-lg md:m-3 md:size-3/5"
+    class="object-contain rounded-lg shadow-lg md:m-3 md:size-2/5"
     loading="eager"
   />
 </section>
