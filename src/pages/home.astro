@@ -3,37 +3,38 @@ import { Image } from "astro:assets";
 import hero_image from "public/images/hero-5.jpg";
 ---
 
-<!-- <section class="flex flex-col border-2 sm:bg-red-500"> --><!-- <div class="flex gap-2 border-2 border-red-500"> -->
 <section
   id="home"
-  class="flex flex-col justify-center  items-center gap-3 border-1 lg:flex-row m-5"
+  class="flex flex-col justify-center items-center gap-3 border-1 lg:flex-row m-5"
 >
-  <!-- <div class="flex flex-col justify-center gap-6 items-center"> -->
-    <div class="md:hidden flex  flex-col h-[calc(100vh-10rem)] items-center  justify-center ">
-      <img
-      class=" m-1 pb-2 b-2  block size-max h-fit"
-      src="/Waggles & Whiskers-no-text-orange-word.jpg"
+  <div
+    class="md:hidden flex flex-col h-[calc(100vh-6rem)] items-center justify-center"
+  >
+    <img
+      class="m-auto pb-2 b-2 block size-max h-fit self-center"
+      src="/Waggles & Whiskers-no-text-green-word.jpg"
       alt="Waggles & Whiskers"
       width="300"
       height="300"
-      />
-      <!-- <div class="pb-1 mt-auto"> -->
-        <img
-        class=" mb-5 b-2 size-12 sm:size-14 mt-auto  "
-        src="/icons8-down-chevron-50.png"
+    />
+    <a href="#profile ">
+      <img
+        class="mb-5 b-2 size-12 sm:size-14 mt-auto"
+        src="/icons8-down-chevron-50 (2).png"
         alt="Waggles & Whiskers"
         width="300"
         height="300"
-        />
-      <!-- </div> -->
-      
-    </div>
-    <div class="flex flex-col gap-8 items-center md:m-3">
+      />
+    </a>
+  </div>
+  <div id="profile"></div>
+  <div class="mt-20 flex flex-col gap-8 items-center md:m-3">
     <h1 class="text-6xl text-neutral-900 tracking-widest text-center">
       <span class="text-orange-500">Friendly</span> Dog Walking in Brighton
     </h1>
     <h2 class="text-xl tracking-wider text-center text-neutral-800">
-      Your dogs health and hapiness comes first with Waggles & Whiskers, based in Hanover,  providing a professional and reliable service you can trust.
+      Your dogs health and hapiness comes first with Waggles & Whiskers, based
+      in Hanover, providing a professional and reliable service you can trust.
     </h2>
 
     <a
@@ -42,11 +43,6 @@ import hero_image from "public/images/hero-5.jpg";
     >
       waggleswhiskers@gmail.com</a
     >
-    <!-- a tag here to phone? -->
-    <!-- <button
-      class="bg-orange-500 hover:bg-orange-600 active:bg-orange-700 focus:outline-none rounded-lg py-2 p-3 tracking-wider text-white"
-      >07875 291157</button
-    > -->
 
     <p
       class="rounded-lg py-2 p-3 tracking-wider text-orange-500 font-bold text-l border-2 border-orange-500"
