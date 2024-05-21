@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import hero_image from "public/images/hero-5-darken.jpg";
+import down_chevron from "public/icons/icons8-down-chevron-50 (2).png";
 ---
 
 <section
@@ -18,9 +19,9 @@ import hero_image from "public/images/hero-5-darken.jpg";
       height="300"
     />
     <a href="#profile ">
-      <img
+      <Image
         class="mb-5 b-2 size-12 sm:size-14 mt-auto"
-        src="/icons8-down-chevron-50 (2).png"
+        src={down_chevron}
         alt="Waggles & Whiskers"
         width="300"
         height="300"
@@ -46,7 +47,7 @@ import hero_image from "public/images/hero-5-darken.jpg";
 
     <a
       href="tel:07875291157"
-      class="rounded-lg py-2 p-3 tracking-wider text-orange-500 font-bold text-l border-2 border-orange-500  hover:border-green-600 hover:text-green-600 hover:shadow-green-500/50 active:bg-green-700 focus:outline-none shadow shadow-orange-500/50"
+      class="rounded-lg py-2 p-3 tracking-wider text-orange-500 font-bold text-l border-2 border-orange-500 hover:border-green-600 hover:text-green-600 hover:shadow-green-500/50 active:bg-green-700 focus:outline-none shadow shadow-orange-500/50"
     >
       07875 291 157
     </a>
