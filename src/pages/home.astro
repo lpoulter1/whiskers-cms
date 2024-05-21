@@ -3,12 +3,34 @@ import { Image } from "astro:assets";
 import hero_image from "public/images/hero-5-darken.jpg";
 ---
 
-<!-- <section class="flex flex-col border-2 sm:bg-red-500"> --><!-- <div class="flex gap-2 border-2 border-red-500"> -->
 <section
   id="home"
-  class="flex flex-col items-center gap-3 border-1 lg:flex-row m-5"
+  class="flex flex-col justify-center items-center gap-3 border-1 lg:flex-row m-5"
 >
-  <div class="flex flex-col gap-8 items-center md:m-3 p-8">
+
+  <div
+    class="md:hidden flex flex-col h-[calc(100vh-6rem)] items-center justify-center"
+  >
+    <img
+      class="m-auto pb-2 b-2 block size-max h-fit self-center"
+      src="/Waggles & Whiskers-no-text-green-word.jpg"
+      alt="Waggles & Whiskers"
+      width="300"
+      height="300"
+    />
+    <a href="#profile ">
+      <img
+        class="mb-5 b-2 size-12 sm:size-14 mt-auto"
+        src="/icons8-down-chevron-50 (2).png"
+        alt="Waggles & Whiskers"
+        width="300"
+        height="300"
+      />
+    </a>
+  </div>
+  <div id="profile"></div>
+  <div class="mt-20 flex flex-col gap-8 items-center md:m-3">
+
     <h1 class="text-6xl text-neutral-900 tracking-widest text-center">
       <span class="text-orange-500">Friendly</span> Dog Walking in Brighton
     </h1>
