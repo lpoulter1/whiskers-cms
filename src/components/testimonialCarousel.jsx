@@ -17,11 +17,11 @@ export default function TestimonialsCarousel() {
 
     carouselItems.push(
       <CarouselItem key={i} className="items-center justify-evenly">
-        <div className="flex  gap-10 flex-col md:flex-row">
+        <div className="flex gap-10 flex-col md:flex-row">
           <div className="md:w-1/2 ">
-            <Card className="h-96 w-96 content-center bg-neutral-50 ">
+            <Card className="h-96 w-96 content-center  bg-neutral-50 ">
               <CardContent className=" ">
-                <div className="flex flex-col gap-5 m-5 items-center h-3/6">
+                <div className="flex flex-col  gap-5 m-5 items-center h-3/6">
                   <p className="text-center text-neutral-900 font-medium text-sm">
                     "{review.text}"
                   </p>
@@ -77,7 +77,7 @@ export default function TestimonialsCarousel() {
 
   return (
     <div
-      className="flex flex-col size-11/12 p-3 justify-center
+      className="flex flex-col size-11/12 justify-center
     "
     >
       <div className="flex flex-col md:hidden">
@@ -86,7 +86,7 @@ export default function TestimonialsCarousel() {
             {reviews.map((review, index) => (
               <CarouselItem key={index} className="flex place-items-center">
                 <div className="">
-                  <Card className="bg-neutral-50">
+                  <Card className="bg-neutral-50 py-4">
                     <CardContent className="">
                       <div className=" flex flex-col gap-3">
                         <p className="text-center">{review.text}</p>

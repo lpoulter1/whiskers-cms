@@ -34,7 +34,7 @@ const MAX_MD_IMAGES = 6;
               <Image
                 src={img.filename}
                 alt=""
-                class="hidden object-cover w-full h-full lg:block"
+                class="hidden  w-full h-full lg:block aspect-square object-fit"
                 inferSize={true}
               />
             </button>
@@ -45,7 +45,7 @@ const MAX_MD_IMAGES = 6;
             <Image
               src={img.filename}
               alt=""
-              class="hidden object-cover w-full h-full md:block"
+              class="hidden aspect-square object-fit w-full h-full md:block"
               inferSize={true}
             />
           </button>
@@ -57,7 +57,7 @@ const MAX_MD_IMAGES = 6;
           <Image
             src={img.filename}
             alt=""
-            class="object-cover w-full h-full"
+            class="aspect-square object-cover w-full h-full"
             inferSize={true}
           />
         </button>
