@@ -20,7 +20,7 @@ export default function NavMenu() {
           alt="waggles &whiskers"
         />{" "}
       </a>
-      <NavigationMenu className="scroll-smooth">
+      <NavigationMenu>
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger>
@@ -29,13 +29,19 @@ export default function NavMenu() {
 
             <NavigationMenuContent className="flex flex-col gap-6 text-lg border-2 p-3 ">
               <NavigationMenuLink>
-                <a href="#services" className=" hover:text-orange-600">Services & Prices</a>
+                <a href="#services" className=" hover:text-orange-600">
+                  Services & Prices
+                </a>
               </NavigationMenuLink>
               <NavigationMenuLink>
-                <a href="#dog-gallery" className=" hover:text-orange-600">Gallery</a>
+                <a href="#dog-gallery" className=" hover:text-orange-600">
+                  Gallery
+                </a>
               </NavigationMenuLink>
               <NavigationMenuLink>
-                <a href="#testimonials" className=" hover:text-orange-600">Testimonials</a>
+                <a href="#testimonials" className=" hover:text-orange-600">
+                  Testimonials
+                </a>
               </NavigationMenuLink>
             </NavigationMenuContent>
           </NavigationMenuItem>
