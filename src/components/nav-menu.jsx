@@ -20,7 +20,7 @@ export default function NavMenu() {
           alt="waggles &whiskers"
         />{" "}
       </a>
-      <NavigationMenu>
+      <NavigationMenu className="scroll-smooth">
         <NavigationMenuList>
           <NavigationMenuItem>
             <NavigationMenuTrigger>
